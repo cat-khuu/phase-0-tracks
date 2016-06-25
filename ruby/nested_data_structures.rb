@@ -40,3 +40,8 @@ classroom = {
   }
 }
 
+classroom[:desk2][:name] = "Leo Kosinski"
+classroom[:desk2][:assigned] = true
+
+
+p classroom
