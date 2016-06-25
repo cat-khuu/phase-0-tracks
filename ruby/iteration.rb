@@ -75,9 +75,28 @@ p sorted_divisions
 # Declare an array and a hash
 
 array = [1, 2, 9, 25, 81, 100]
-forecast = {"Tucson" => "91 degrees", "Dallas" => "102 degrees", "Philadelphia" => "89 degrees", "New York City" => "87 degrees", "Grand Rapids" => "88 degrees"}
+forecast = {"Tucson" => 91, "Dallas" => 102, "Philadelphia" => 89, "New York City" => 87, "Grand Rapids" => 88}
 
-# 1. A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
+puts "1. A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5)."
 
+# ARRAY
+
+puts "Array before .delete_if is used."
+p array
+
+array.delete_if {|n| n > 50 }
+
+puts "Array after .delete_if is used. Delete if number is greater than 50."
+p array
+
+# HASH
+
+puts "Hash before .delete_if is used."
+p forecast
+
+forecast.delete_if {|city, temperature| temperature < 90}
+
+puts "Hash after .delete_if is used. Delete if temperature (value) is less than 90 degrees."
+p forecast
 
 
