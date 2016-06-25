@@ -99,4 +99,15 @@ forecast.delete_if {|city, temperature| temperature < 90}
 puts "Hash after .delete_if is used. Delete if temperature (value) is less than 90 degrees."
 p forecast
 
+puts "A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5)."
+
+# ARRAY
+
+puts "Array before .keep_if is used."
+p array
+
+array.keep_if {|n| n <= 9 }
+
+puts "Array after .keep_if is used. Keep if number is less than or equal to 9."
+p array
 
