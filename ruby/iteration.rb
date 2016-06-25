@@ -70,3 +70,14 @@ end
 
 puts "Prints values (floor divisions) from hashed array in alphabetical order for each floor (key). When .map is used on a hash, it returns an array. sorted_divisions will return as an arrayed array."
 p sorted_divisions
+
+# Use the Documentation
+# Declare an array and a hash
+
+array = [1, 2, 9, 25, 81, 100]
+forecast = {"Tucson" => "91 degrees", "Dallas" => "102 degrees", "Philadelphia" => "89 degrees", "New York City" => "87 degrees", "Grand Rapids" => "88 degrees"}
+
+# 1. A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
+
+
+
