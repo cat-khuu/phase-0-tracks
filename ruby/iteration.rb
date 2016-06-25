@@ -131,3 +131,11 @@ p array
 
 puts "Array after .include? is used. See if 1 is included in array. Result will display as true or false."
 p array.include?(1)
+
+# HASH
+
+puts "Hash before .keys.include? is used."
+p forecast
+
+puts "Hash after .keys.include? is used to see if any of the cities(keys) includes Tampa."
+p forecast.keys.include?("Tampa")
