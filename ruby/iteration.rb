@@ -58,3 +58,15 @@ main_floors_in_building.map! do |floor|
 end
 
 p main_floors_in_building
+
+puts "Hashed array before .map is used."
+p building_directory
+
+puts "Hashed array after .map is used. Stored results from using .map in new variable (sorted_divisions). .map! does not work on hashes."
+sorted_divisions = building_directory.map do |floor, division|
+  puts division
+  division.sort
+end
+
+puts "Prints values (floor divisions) from hashed array in alphabetical order for each floor (key). When .map is used on a hash, it returns an array. sorted_divisions will return as an arrayed array."
+p sorted_divisions
