@@ -122,4 +122,12 @@ forecast.keep_if {|city, temperature| temperature > 100}
 puts "Hash after .keep_if is used. Keep if temperature (value) is greater than 100 degrees."
 p forecast
 
+puts "3. A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options"
 
+# ARRAY
+
+puts "Array before .include? is used."
+p array
+
+puts "Array after .include? is used. See if 1 is included in array. Result will display as true or false."
+p array.include?(1)
