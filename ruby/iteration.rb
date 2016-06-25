@@ -17,6 +17,6 @@ doggy_treats {|name| puts "Bark! Bark! Me! #{name}. I want treats!"}
 
 main_floors_in_building = [3, 8, 11, 12, 13, 14, 18]
 
-building_directory = {3: ["Juvenile", "Southwest"], 8: ["DDOU", "PNTF", "Tech"], 11: ["Cental", "East", "Northeast", "Northwest", "South"], 12: ["FVSA", "Homicide", "Victim Services"], 13: ["Appeals", "Legal"], 14: ["Pre-Trial"], 18: ["ECCU", "Government Fraud", "Insurance Fraud", "Special Investigations", "Community Outreach"]}
+building_directory = {3 => ["Juvenile", "Southwest"], 8 => ["DDOU", "PNTF", "Tech"], 11 => ["Cental", "East", "Northeast", "Northwest", "South"], 12 => ["FVSA", "Homicide", "Victim Services"], 13 => ["Appeals", "Legal"], 14 => ["Pre-Trial"], 18 => ["ECCU", "Government Fraud", "Insurance Fraud", "Special Investigations", "Community Outreach"]}
 
 
