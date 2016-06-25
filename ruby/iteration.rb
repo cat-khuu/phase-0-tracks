@@ -19,5 +19,17 @@ main_floors_in_building = [3, 8, 11, 12, 13, 14, 18]
 
 building_directory = {3 => ["Juvenile", "Southwest"], 8 => ["DDOU", "PNTF", "Tech"], 11 => ["Cental", "East", "Northeast", "Northwest", "South"], 12 => ["FVSA", "Homicide", "Victim Services"], 13 => ["Appeals", "Legal"], 14 => ["Pre-Trial"], 18 => ["ECCU", "Government Fraud", "Insurance Fraud", "Special Investigations", "Community Outreach"]}
 
+puts "array before .each is used"
+p main_floors_in_building
+
+puts "array after .each is used."
+puts "Print floors that are greater than or equal to 8."
+main_floors_in_building.each do |floor|
+if floor >= 8
+  p floor
+end
+end
+
+
 building_directory.each do |floor, division| puts division
 end
