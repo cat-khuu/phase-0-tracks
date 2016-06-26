@@ -40,8 +40,8 @@ classroom = {
   }
 }
 
-classroom[:desk2][:name] = "Leo Kosinski"
-classroom[:desk2][:assigned] = true
+# Access information from nested data structure
 
-
-p classroom
+p classroom[:desk2][:name] = "Leo Kosinski"
+p classroom[:desk2][:grade] = 7
+p classroom[:desk2][:assigned] = true
