@@ -45,3 +45,5 @@ classroom = {
 p classroom[:desk2][:name] = "Leo Kosinski"
 p classroom[:desk2][:grade] = 7
 p classroom[:desk2][:assigned] = true
+p classroom[:desk2][:books].push("Where the Red Ferns Grow")
+
