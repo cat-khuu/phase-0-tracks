@@ -47,5 +47,5 @@ puts "Enter your name"
 covert_spy_name = gets.chomp
 p alias_manager(covert_spy_name)
 alias_history[covert_spy_name] = alias_manager(covert_spy_name)
-p alias_history
+# p alias_history
 
