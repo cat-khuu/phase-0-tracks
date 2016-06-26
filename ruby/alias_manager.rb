@@ -10,4 +10,11 @@
 # Substitute all vowels [aeiou] in full_name with the next vowel [eioua]. Substitute all consonants in full_name with the next consonant in the alphabet. Store result in full_name_id.
 # Convert full_name_id back into array. Iterate through the array and capitalized the first letter in the first and last name. Convert the array back into a string. Store result in full_name_idx.
 
+def alias_manager(covert_spy_name)
+  arrayed_name = covert_spy_name.downcase.split(" ")
+  full_name = arrayed_name.reverse.join(" ")
+  full_name_id = full_name.gsub(/[abcdefghijklmnopqrstuvwxyz]/, 'a' => 'e', 'b' => 'c', 'c' => 'd', 'd' => 'f', 'e' => 'i', 'f' => 'g', 'g' => 'h', 'h' => 'j', 'i' => 'o', 'j' => 'k', 'k' => 'l', 'l' => 'm', 'm' => 'n', 'n' => 'p', 'o' => 'u', 'p' => 'q', 'q' => 'r', 'r' => 's', 's' => 't', 't' => 'v', 'u' => 'a', 'v' => 'w', 'w' => 'x', 'x' => 'y', 'y' => 'z', 'z' => 'b')
+  full_name_idx = full_name_id.split.map {|x| x.capitalize}.join(' ')
+end
 
+p alias_manager("Felicia Torres")
