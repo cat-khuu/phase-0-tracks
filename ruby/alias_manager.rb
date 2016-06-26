@@ -43,3 +43,9 @@ end
 # - DO UNTIL answer == "quit" to exit program and print alias history
 # PRINT alias_history
 
+puts "Enter your name"
+covert_spy_name = gets.chomp
+p alias_manager(covert_spy_name)
+alias_history[covert_spy_name] = alias_manager(covert_spy_name)
+p alias_history
+
