@@ -48,4 +48,4 @@ p classroom[:desk2][:assigned] = true
 p classroom[:desk2][:books].push("Where the Red Ferns Grow")
 p classroom[:desk1][:writing_utensils].keys.sort.reverse
 p classroom[:desk3][:writing_utensils].keys.sort
-
+p classroom[:desk2][:books].push("Little Women", "Atlas Shrugged")
