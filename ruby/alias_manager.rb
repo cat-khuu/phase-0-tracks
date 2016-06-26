@@ -70,5 +70,7 @@ end until answer == "quit"
 
 # When the user exits the program, iterate through the data structure and print all of the data the user entered. A sentence like "Vussit Gimodoe is actually Felicia Torres" or "Felicia Torres is also known as Vussit Gimodoe" for each agent is fine.
 
-
+alias_history.each do |old_name, new_name|
+  puts "#{new_name} is actually #{old_name}."
+end
 
