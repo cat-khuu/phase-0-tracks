@@ -49,3 +49,23 @@ p alias_manager(covert_spy_name)
 alias_history[covert_spy_name] = alias_manager(covert_spy_name)
 # p alias_history
 
+begin
+puts "Are you satisfied with your new spy name? (y/n)"
+another_name = gets.chomp
+
+  if another_name == "n"
+    puts "Enter another name"
+    covert_spy_name = gets.chomp
+    p alias_manager(covert_spy_name)
+    alias_history[covert_spy_name] = alias_manager(covert_spy_name)
+  elsif another_name == "y"
+    puts "Type 'quit' to exit and print your alias history."
+    answer = gets.chomp
+  else
+    puts "I'm sorry, I didn't get that..."
+  end
+end until answer == "quit"
+
+
+
+
