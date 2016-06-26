@@ -67,5 +67,5 @@ another_name = gets.chomp
 end until answer == "quit"
 
 
-
+puts "Here's your alias history for this session: #{alias_history}"
 
