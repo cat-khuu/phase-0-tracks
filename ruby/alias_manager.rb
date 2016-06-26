@@ -24,6 +24,7 @@ end
 
 
 # Provide a user interface that lets a user enter a name and get a fake name back. Let the user do this repeatedly until they decide to quit by typing 'quit'. (They might just hit Enter to continue.)
+# Use a data structure to store the fake names as they are entered.
 
 # Create empty hash to store given spy name(key) and new spy name (value). Name hash alias_history
 # Prompt user for name
@@ -41,7 +42,7 @@ end
 # - Store user input in variable answer.
 # ELSE print "I'm sorry, I didn't get that..."
 # - DO UNTIL answer == "quit" to exit program and print alias history
-# PRINT alias_history
+#
 
 puts "Enter your name"
 covert_spy_name = gets.chomp
@@ -67,5 +68,9 @@ another_name = gets.chomp
 end until answer == "quit"
 
 
-puts "Here's your alias history for this session: #{alias_history}"
+# When the user exits the program, iterate through the data structure and print all of the data the user entered. A sentence like "Vussit Gimodoe is actually Felicia Torres" or "Felicia Torres is also known as Vussit Gimodoe" for each agent is fine.
+
+alias_history.each do |old_name, new_name|
+  puts "#{new_name} is actually #{old_name}."
+end
 
