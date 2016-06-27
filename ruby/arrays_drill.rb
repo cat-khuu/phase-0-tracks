@@ -57,3 +57,6 @@ end
 # CALL METHOD - RELEASE 1
 
 p add_arrays(array, array2)
+
+# CALL METHOD - RELEASE 2
+p build_array(1, "two", nil)
