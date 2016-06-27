@@ -1,5 +1,4 @@
 # 5.2 Arrays Pairing Challenge
-
 # RELEASE 2
 
 # DEFINE METHOD that will build an array
@@ -13,6 +12,8 @@ def add_to_array(x,y)
   array = x
   array.push(y)
 end
+
+#<----------- blank space ------------>
 
 # RELEASE 1
 # INITIALIZE an empty array
@@ -60,9 +61,12 @@ def add_arrays(arr1, arr2)
   return combined
 end
 
+#<----------- blank space ------------>
+
 # CALL METHOD - RELEASE 1
 
 p add_arrays(array, array2)
+
 
 # CALL METHOD - RELEASE 2
 p build_array(1, "two", nil)
