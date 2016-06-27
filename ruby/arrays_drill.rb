@@ -66,3 +66,5 @@ p add_arrays(array, array2)
 
 # CALL METHOD - RELEASE 2
 p build_array(1, "two", nil)
+p add_to_array([], "a")
+p add_to_array(["a", "b", "c", 1, 2], 3)
