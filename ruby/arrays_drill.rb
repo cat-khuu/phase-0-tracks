@@ -8,6 +8,12 @@ def build_array(x,y,z)
   array.push(x,y,z)
 end
 
+# DEFINE METHOD that will add to an array
+def add_to_array(x,y)
+  array = x
+  array.push(y)
+end
+
 # RELEASE 1
 # INITIALIZE an empty array
 array = []
