@@ -11,3 +11,9 @@ array.push("cheese", 22, "Happy Fourth of July!", "glitter", "bagels")
 
 # PRINT the array
 p array
+
+# DELETE item at index 2
+array.delete_at(2)
+
+# PRINT the array
+p array
