@@ -38,3 +38,9 @@ p include
 # INITIALIZE a new array
 array2 = ["pb", "jelly", "sandwich"]
 p array2
+
+# DEFINE METHOD add_arrays
+def add_arrays(arr1, arr2)
+  combined = arr1 + arr2
+  return combined
+end
