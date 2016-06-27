@@ -29,3 +29,8 @@ array.shift
 
 # PRINT the array
 p array
+
+# INCLUDE item?
+puts "array.include?('pizza pie') "
+include = array.include?('pizza pie')
+p include
