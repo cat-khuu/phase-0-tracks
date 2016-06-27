@@ -17,3 +17,9 @@ array.delete_at(2)
 
 # PRINT the array
 p array
+
+# ADD an item at index 2
+array.insert(2, "pizza pie")
+
+# PRINT the array
+p array
