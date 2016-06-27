@@ -1,4 +1,13 @@
 # 5.2 Arrays Pairing Challenge
+
+# RELEASE 2
+
+# DEFINE METHOD that will build an array
+def build_array(x,y,z)
+  array = []
+  array.push(x,y,z)
+end
+
 # RELEASE 1
 # INITIALIZE an empty array
 array = []
