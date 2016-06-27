@@ -23,3 +23,9 @@ array.insert(2, "pizza pie")
 
 # PRINT the array
 p array
+
+# DELETE the first item of the array w/o referring to its index
+array.shift
+
+# PRINT the array
+p array
