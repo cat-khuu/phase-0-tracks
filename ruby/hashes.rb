@@ -100,3 +100,4 @@ end
 # Print the latest version of the hash, and exit the program.
 
 puts "Here are your preferences: #{result}."
+puts "Please follow-up with our adminstrator to schedule your follow-up session. We can make your dream of #{result[:decor_theme]} a reality!"
