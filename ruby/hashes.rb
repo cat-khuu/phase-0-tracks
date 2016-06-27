@@ -29,3 +29,11 @@ trump_tower = gets.chomp
 trump_fanatic = trump_tower == "y"
 
 result = {}
+result[:name] = name
+result[:age] = age
+result[:offspring] = offspring
+result[:decor_theme] = decor_theme
+result[:likes_dogs] = likes_dogs
+result[:trump_fanatic] = trump_fanatic
+
+puts "Here are your preferences, thus far: #{result}."
