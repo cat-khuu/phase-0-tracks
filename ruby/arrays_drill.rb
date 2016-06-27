@@ -44,3 +44,7 @@ def add_arrays(arr1, arr2)
   combined = arr1 + arr2
   return combined
 end
+
+# CALL METHOD - RELEASE 1
+
+p add_arrays(array, array2)
