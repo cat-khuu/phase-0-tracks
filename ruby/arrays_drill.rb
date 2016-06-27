@@ -34,3 +34,7 @@ p array
 puts "array.include?('pizza pie') "
 include = array.include?('pizza pie')
 p include
+
+# INITIALIZE a new array
+array2 = ["pb", "jelly", "sandwich"]
+p array2
