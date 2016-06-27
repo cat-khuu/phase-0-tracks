@@ -96,3 +96,7 @@ when "n"
 else
   puts "I didn't get that..."
 end
+
+# Print the latest version of the hash, and exit the program.
+
+puts "Here are your preferences: #{result}."
