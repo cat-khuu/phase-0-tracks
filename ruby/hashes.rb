@@ -27,3 +27,5 @@ likes_dogs = dogs_play_poker == "n"
 puts "Love the thought of your home being dubbed as 'The Trump Tower 2.0'? (y/n)"
 trump_tower = gets.chomp
 trump_fanatic = trump_tower == "y"
+
+result = {}
