@@ -13,7 +13,7 @@ class Puppy
   end
 
   def roll_over
-    puts "#*rolls over*"
+    puts "*rolls over*"
   end
 
 
@@ -24,4 +24,5 @@ end
 fido = Puppy.new
 fido.fetch("ball")
 fido.speak(4)
+fido.roll_over
 
