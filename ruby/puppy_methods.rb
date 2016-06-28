@@ -90,5 +90,17 @@
 
 class Dragon
 
+  def breathe_fire
+    puts "*sizzle*"
+  end
+
+  def toast_marshmallows(amount)
+    puts "I toasted #{amount} marshmallows."
+  end
+
+  def fly(altitude)
+    puts "I can fly #{altitude} feet high!"
+  end
+
 end
 
