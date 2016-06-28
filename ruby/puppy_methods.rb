@@ -48,6 +48,9 @@ class Puppy
 
   end
 
+  def sit
+    puts "*sits*"
+  end
 
 end
 
