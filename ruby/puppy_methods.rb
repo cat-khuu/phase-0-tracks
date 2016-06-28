@@ -2,26 +2,23 @@
 class Puppy
 
 # DEFINE METHOD
-# Puppy#fetch
+
 
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
   end
 
-# Puppy#speak
 
   def speak(frequency)
     frequency.times {puts "woof!"}
   end
 
-# Puppy#roll_over
 
   def roll_over
     puts "*rolls over*"
   end
 
-# Puppy#sit
 
   def sit
     puts "*sits*"
@@ -43,9 +40,6 @@ class Puppy
 # RETURN dog_age
 
 # <----- End Pseudocode ----->
-
-# DEFINE METHOD
-# Puppy#dog_years
 
   def dog_years(human_years)
     if human_years == 1
