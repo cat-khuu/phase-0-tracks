@@ -8,6 +8,11 @@ class Puppy
     toy
   end
 
+  def speak(frequency)
+    frequency.times {puts "woof"}
+  end
+
+
 end
 
 # DRIVER CODE
