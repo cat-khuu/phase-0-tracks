@@ -64,5 +64,6 @@ fido.dog_years(1)
 fido.dog_years(2)
 fido.dog_years(3)
 fido.dog_years(4)
+fido.sit
 
 
