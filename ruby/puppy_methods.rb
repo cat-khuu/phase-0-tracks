@@ -1,20 +1,33 @@
 # DEFINE PUPPY CLASS
 class Puppy
 
+# DEFINE METHOD
+# Puppy#fetch
 
-# DEFINE CLASS METHOD
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
   end
 
+# Puppy#speak
+
   def speak(frequency)
     frequency.times {puts "woof!"}
   end
 
+# Puppy#roll_over
+
   def roll_over
     puts "*rolls over*"
   end
+
+# Puppy#sit
+
+  def sit
+    puts "*sits*"
+  end
+
+# <----- Begin Pseudocode ----->
 
 # Puppy#dog_years
 # input: integer as human years
@@ -28,6 +41,11 @@ class Puppy
 # ELSIF human_years is equal to or greater than 3, then dog_age = 24 + (4 * (human_years-2)). Suppose human_years = 3. dog_age = 24 + (4 * (3-2)) = 28.
 # ELSE print "Invalid input. Please enter an integer."
 # RETURN dog_age
+
+# <----- End Pseudocode ----->
+
+# DEFINE METHOD
+# Puppy#dog_years
 
   def dog_years(human_years)
     if human_years == 1
@@ -48,11 +66,8 @@ class Puppy
 
   end
 
-  def sit
-    puts "*sits*"
-  end
-
 end
+
 
 # DRIVER CODE
 
