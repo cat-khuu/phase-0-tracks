@@ -10,3 +10,8 @@ class Puppy
 
 end
 
+# DRIVER CODE
+
+fido = Puppy.new
+fido.fetch("ball")
+
