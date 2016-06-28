@@ -3,7 +3,7 @@ class Puppy
 
 # DEFINE METHOD
 
-  def initialize
+  def initialze
     puts "Initializing new puppy instance..."
   end
 
