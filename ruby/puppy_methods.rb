@@ -78,4 +78,17 @@
 # fido.dog_years(4)
 # fido.sit
 
+# <------ Write your own Class ------->
+
+# Design and implement your own class below the Puppy class -- anything you'd like, but it should have an initialize method and AT LEAST two other instance methods. Then do the following:
+
+# 1. Use a loop to make 50 instances of your class.
+# 2. Modify your loop so that it stores all of the instances in a data structure.
+# 3. Iterate over that data structure using .each and call the instance methods you wrote on each instance. So if you wrote a Gymnast class, this is where you'd call .flip and .jump on each of your instances of Gymnast.
+
+
+
+class Dragon
+
+end
 
