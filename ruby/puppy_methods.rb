@@ -89,6 +89,11 @@
 
 
 class Dragon
+  def initialize(name)
+    @name = name
+    @altitude = altitude
+    @amount = amount
+  end
 
   def breathe_fire
     puts "*sizzle*"
