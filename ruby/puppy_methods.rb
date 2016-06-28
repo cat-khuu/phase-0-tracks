@@ -31,15 +31,17 @@ class Puppy
 
   def dog_years(human_years)
     if human_years == 1
-      dog_age = 15
+       dog_age = 15
     elsif human_years == 2
-      dog_age = 24
+       dog_age = 24
     elsif human_years >= 3
-      dog_age = 24 + (4 * (human_years-2))
+       dog_age = 24 + (4 * (human_years-2))
     else
       puts "Invalid input. Please enter an integer."
     end
-    return dog_age
+
+    puts "#{human_years} human years equals #{dog_age} dog years."
+
   end
 
 
@@ -51,4 +53,5 @@ fido = Puppy.new
 fido.fetch("ball")
 fido.speak(4)
 fido.roll_over
+
 
