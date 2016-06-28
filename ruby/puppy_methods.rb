@@ -12,6 +12,10 @@ class Puppy
     frequency.times {puts "woof!"}
   end
 
+  def roll_over
+    puts "#*rolls over*"
+  end
+
 
 end
 
