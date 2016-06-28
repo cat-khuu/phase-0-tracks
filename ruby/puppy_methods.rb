@@ -40,7 +40,11 @@ class Puppy
       puts "Invalid input. Please enter an integer."
     end
 
-    puts "#{human_years} human years equals #{dog_age} dog years."
+    if human_years == 1
+      puts "#{human_years} human year equals #{dog_age} dog years."
+    elsif human_years >= 2
+      puts "#{human_years} human years equals #{dog_age} dog years."
+    end
 
   end
 
