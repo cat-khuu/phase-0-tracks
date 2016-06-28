@@ -29,6 +29,19 @@ class Puppy
 # ELSE print "Invalid input. Please enter an integer."
 # RETURN dog_age
 
+  def dog_years(human_years)
+    if human_years == 1
+      dog_age = 15
+    elsif human_years == 2
+      dog_age = 24
+    elsif human_years >= 3
+      dog_age = 24 + (4 * (human_years-2))
+    else
+      puts "Invalid input. Please enter an integer."
+    end
+    return dog_age
+  end
+
 
 end
 
