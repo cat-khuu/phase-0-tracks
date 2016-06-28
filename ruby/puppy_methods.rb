@@ -9,7 +9,7 @@ class Puppy
   end
 
   def speak(frequency)
-    frequency.times {puts "woof"}
+    frequency.times {puts "woof!"}
   end
 
 
@@ -19,4 +19,5 @@ end
 
 fido = Puppy.new
 fido.fetch("ball")
+fido.speak(4)
 
