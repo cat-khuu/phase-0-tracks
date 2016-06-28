@@ -89,8 +89,7 @@
 
 
 class Dragon
-  def initialize(name)
-    @name = name
+  def initialize
     @altitude = altitude
     @amount = amount
   end
@@ -108,4 +107,6 @@ class Dragon
   end
 
 end
+
+
 
