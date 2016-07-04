@@ -23,6 +23,8 @@
 # The method age should simply return @age.
 # The method ethnicity should return @ethnicity.
 
+# @age and @ethnicity should have getter methods as well.
+
 # Update your driver code to test your work.
 
 
@@ -72,6 +74,18 @@ class Santa
 
   def age=(new_age)
     @age = new_age
+  end
+
+
+# @age and @ethnicity should have getter methods as well.
+
+
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
   end
 
 end
