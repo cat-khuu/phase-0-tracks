@@ -17,21 +17,6 @@
 # Add some diverse initializations to your file as driver code, then test your work by running the program from the command line.
 # ------------------------------------------ #
 
-# Add three attribute-changing methods to your Santa class:
-
-# celebrate_birthday should age Santa by one year.
-# get_mad_at can take a reindeer's name as an argument, and move that reindeer in last place in the reindeer rankings.
-# The @gender attribute should have a SETTER method that allows @gender to be reassigned from outside the class definition.
-
-  def celebrate_birthday
-    @age = @age + 1
-  end
-
-  def get_mad_at(reindeer_name)
-    @reindeer_ranking.delete(reindeer_name)
-    @reindeer_ranking.insert(@reindeer_ranking.length, reindeer_name)
-    return @reindeer_ranking
-  end
 
 # Add two "GETTER" methods as well:
 
@@ -58,6 +43,35 @@ class Santa
 
   def eat_milk_and_cookies(cookie)
     puts "That was a good #{cookie}!"
+  end
+
+
+# Add three attribute-changing methods to your Santa class:
+
+# celebrate_birthday should age Santa by one year.
+# get_mad_at can take a reindeer's name as an argument, and move that reindeer in last place in the reindeer rankings.
+
+
+  def celebrate_birthday
+    @age = @age + 1
+  end
+
+  def get_mad_at(reindeer_name)
+    @reindeer_ranking.delete(reindeer_name)
+    @reindeer_ranking.insert(@reindeer_ranking.length, reindeer_name)
+    return @reindeer_ranking
+  end
+
+
+# @gender and @age should have setter methods that allows @gender and @age to be reassigned from outside the class definition.
+
+
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+  def age=(new_age)
+    @age = new_age
   end
 
 end
