@@ -4,7 +4,7 @@
 # An eat_milk_and_cookies method that takes a cookie type (example: "snickerdoodle") as a parameter and prints "That was a good <type of cookie here>!"
 # An initialize method that prints "Initializing Santa instance ...".
 # ADD driver code
-# -------------------------------------------#
+# ------------------------------------------ #
 
 # Update your Santa class with the following attributes:
 
@@ -12,10 +12,10 @@
 # ethnicity, which will be a string passed in on initialization**
 # reindeer_ranking, an array of reindeer from most preferred to least preferred. This is NOT passed in on initialization; it simply gets a default value of ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 # age, which is NOT passed in on initialization and defaults to 0
-# ------------------------------------------
+# ------------------------------------------ #
 
 # Add some diverse initializations to your file as driver code, then test your work by running the program from the command line.
-# ------------------------------------------
+# -------------- BEGIN CLASS --------------- #
 
 
 class Santa
@@ -79,8 +79,10 @@ class Santa
 #   end
 
 end
+# -------------- END CLASS -------------- #
 
 
+# ------ BEGIN PSEUDOCODE FOR LOOP ------ #
 # Use our array of example genders and an array of example ethnicities to create your Santas with a randomly selected gender and a randomly selected ethnicity.
 # Set your new Santa's age to a random number between 0 and 140.
 # Your program should print out the attributes of each Santa using the instance methods that give you access to that data.
@@ -101,6 +103,7 @@ end
 # Call methods on created instances
 # Increase index by +=1
 # Print result of method calls and updated information for each instance
+# ------- END PSEUDOCODE FOR LOOP -------- #
 
 
 random_age=*(1..100)
@@ -133,8 +136,7 @@ until index == 10 do
   index +=1
 end
 
-
-# Driver Code
+# -------------- DRIVE CODE -------------- #
 
 # santa = Santa.new("agender", "Brazilian-Korean", false)
 # santa = Santa.new("female", "Czech", "prefer not to say")
