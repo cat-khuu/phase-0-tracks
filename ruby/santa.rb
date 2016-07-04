@@ -18,7 +18,6 @@
 # Set santa's age to randomly selected number in random_age array
 # Call methods on created instances
 # Increase index by +=1
-# Store each instance in hashed hash named santas. Where, the the key of the first hash is the santa instance that is created, and the value will contain the second hash. The second hash will santa's :favorite_cookie(key) and cookie type(value).
 # Print result of method calls and updated information for each instance
 # ------- END PSEUDOCODE FOR LOOP -------- #
 
@@ -91,8 +90,6 @@ index = 0
 until index == 10 do
   santa = Santa.new("female", "Haitian", "prefer not to say")
 
-  santas = {santa => {favorite_cookie: nil}}
-
   santa.gender = example_genders.sample
   santa.ethnicity = example_ethnicities.sample
   santa.likes_the_philadelphia_eagles = example_likes_the_philadelphia_eagles.sample
@@ -100,17 +97,15 @@ until index == 10 do
   santa.age = random_age.sample
   santa.speak
   puts "Oddly, Santa, like everyone else, was at some point, #{santa.age} years old, but now Santa is one year older. So that makes Santa #{santa.celebrate_birthday}."
+  santa.eat_milk_and_cookies(example_cookies.sample)
   puts "Current reindeer rankings:"
   p santa.reindeer_ranking
   puts "Since you ate all the #{example_cookies.sample}s, you are no longer one of my top reindeers. Go to the end of the line."
   puts "New reindeer rankings:"
   santa.get_mad_at(santa.reindeer_ranking.sample)
   p santa.reindeer_ranking
-  santas[santa][:favorite_cookie] = santa.eat_milk_and_cookies(example_cookies.sample)
   index +=1
 end
-
-p santas
 
 # -------------- DRIVER CODE -------------- #
 
