@@ -1,22 +1,26 @@
-# Your class should have three instance methods:
+# ------ BEGIN PSEUDOCODE FOR LOOP ------ #
+# Use our array of example genders and an array of example ethnicities to create your Santas with a randomly selected gender and a randomly selected ethnicity.
+# Set your new Santa's age to a random number between 0 and 140.
+# Your program should print out the attributes of each Santa using the instance methods that give you access to that data.
 
-# A speak method that will print "Ho, ho, ho! Haaaappy holidays!"
-# An eat_milk_and_cookies method that takes a cookie type (example: "snickerdoodle") as a parameter and prints "That was a good <type of cookie here>!"
-# An initialize method that prints "Initializing Santa instance ...".
-# ADD driver code
-# ------------------------------------------ #
+# Define the following variables:
 
-# Update your Santa class with the following attributes:
+# - random_age -- as an array
+# - example_genders -- as an array
+# - example_ethnicities -- as an array
+# - example_likes_the_philadelphia_eagles -- as an array
+# - example_cookies -- as an array
 
-# gender, which will be a string passed in on initialization**
-# ethnicity, which will be a string passed in on initialization**
-# reindeer_ranking, an array of reindeer from most preferred to least preferred. This is NOT passed in on initialization; it simply gets a default value of ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-# age, which is NOT passed in on initialization and defaults to 0
-# ------------------------------------------ #
-
-# Add some diverse initializations to your file as driver code, then test your work by running the program from the command line.
-# -------------- BEGIN CLASS --------------- #
-
+# Create loop
+# Set index as 0. Create Santa instances until index == chosen integer (e.g. 10)
+# Initialize new instance and pass gender, ethnicity, and likes_the_philadelphia_eagles during initialization (e.g. santa = Santa.new("female", "Afgan", true))
+# Setup initilization to select random gender, ethnicity, and likes_the_philadelphia_eagles from respective example arrays
+# Set santa's age to randomly selected number in random_age array
+# Call methods on created instances
+# Increase index by +=1
+# Store each instance in hashed hash named santas. Where, the the key of the first hash is the santa instance that is created, and the value will contain the second hash. The second hash will santa's :favorite_cookie(key) and cookie type(value).
+# Print result of method calls and updated information for each instance
+# ------- END PSEUDOCODE FOR LOOP -------- #
 
 class Santa
   attr_accessor :age, :gender, :ethnicity, :likes_the_philadelphia_eagles, :reindeer_ranking
@@ -37,13 +41,6 @@ class Santa
     puts "That was a good #{cookie}!"
   end
 
-
-# Add three attribute-changing methods to your Santa class:
-
-# celebrate_birthday should age Santa by one year.
-# get_mad_at can take a reindeer's name as an argument, and move that reindeer in last place in the reindeer rankings.
-
-
   def celebrate_birthday
     @age = @age + 1
   end
@@ -54,9 +51,7 @@ class Santa
     return @reindeer_ranking
   end
 
-
-# # @gender and @age should have setter methods that allows @gender and @age to be reassigned from outside the class definition.
-
+# # @gender and @age should have setter methods.
 
 #   def gender=(new_gender)
 #     @gender = new_gender
@@ -82,30 +77,6 @@ end
 # -------------- END CLASS -------------- #
 
 
-# ------ BEGIN PSEUDOCODE FOR LOOP ------ #
-# Use our array of example genders and an array of example ethnicities to create your Santas with a randomly selected gender and a randomly selected ethnicity.
-# Set your new Santa's age to a random number between 0 and 140.
-# Your program should print out the attributes of each Santa using the instance methods that give you access to that data.
-
-# Define the following variables:
-
-# - random_age -- as an array
-# - example_genders -- as an array
-# - example_ethnicities -- as an array
-# - example_likes_the_philadelphia_eagles -- as an array
-# - example_cookies -- as an array
-
-# Create loop
-# Set index as 0. Create Santa instances until index == chosen integer (e.g. 10)
-# Initialize new instance and pass gender, ethnicity, and likes_the_philadelphia_eagles during initialization (e.g. santa = Santa.new("female", "Afgan", true))
-# Setup initilization to select random gender, ethnicity, and likes_the_philadelphia_eagles from respective example arrays
-# Set santa's age to randomly selected number in random_age array
-# Call methods on created instances
-# Increase index by +=1
-# Print result of method calls and updated information for each instance
-# ------- END PSEUDOCODE FOR LOOP -------- #
-
-
 random_age=*(1..100)
 
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -119,6 +90,9 @@ example_cookies = ["gingerbread", "sugar cookie", "brownie", "samoa", "chocolate
 index = 0
 until index == 10 do
   santa = Santa.new("female", "Haitian", "prefer not to say")
+
+  santas = {santa => {favorite_cookie: nil}}
+
   santa.gender = example_genders.sample
   santa.ethnicity = example_ethnicities.sample
   santa.likes_the_philadelphia_eagles = example_likes_the_philadelphia_eagles.sample
@@ -126,17 +100,19 @@ until index == 10 do
   santa.age = random_age.sample
   santa.speak
   puts "Oddly, Santa, like everyone else, was at some point, #{santa.age} years old, but now Santa is one year older. So that makes Santa #{santa.celebrate_birthday}."
-  santa.eat_milk_and_cookies(example_cookies.sample)
   puts "Current reindeer rankings:"
   p santa.reindeer_ranking
   puts "Since you ate all the #{example_cookies.sample}s, you are no longer one of my top reindeers. Go to the end of the line."
   puts "New reindeer rankings:"
   santa.get_mad_at(santa.reindeer_ranking.sample)
   p santa.reindeer_ranking
+  santas[santa][:favorite_cookie] = santa.eat_milk_and_cookies(example_cookies.sample)
   index +=1
 end
 
-# -------------- DRIVE CODE -------------- #
+p santas
+
+# -------------- DRIVER CODE -------------- #
 
 # santa = Santa.new("agender", "Brazilian-Korean", false)
 # santa = Santa.new("female", "Czech", "prefer not to say")
