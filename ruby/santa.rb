@@ -36,6 +36,11 @@ class Santa
 
 end
 
-santa = Santa.new
+# Driver Code
+
+santa = Santa.new("agender", "Brazilian-Korean", false)
+santa = Santa.new("female", "Czech", "prefer not to say")
+santa.Santa.new("gender fluid", "Mystical Creature", true)
+santa.Santa.new("bigender", "Irish", "Eagles, who?")
 santa.speak
 santa.eat_milk_and_cookies("brownie")
