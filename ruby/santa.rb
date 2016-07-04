@@ -15,6 +15,32 @@
 # ------------------------------------------ #
 
 # Add some diverse initializations to your file as driver code, then test your work by running the program from the command line.
+# ------------------------------------------ #
+
+# Add three attribute-changing methods to your Santa class:
+
+# celebrate_birthday should age Santa by one year.
+# get_mad_at can take a reindeer's name as an argument, and move that reindeer in last place in the reindeer rankings.
+# The @gender attribute should have a SETTER method that allows @gender to be reassigned from outside the class definition.
+
+  def celebrate_birthday
+    @age = @age + 1
+  end
+
+  def get_mad_at(reindeer_name)
+    @reindeer_ranking.delete(reindeer_name)
+    @reindeer_ranking.insert(@reindeer_ranking.length, reindeer_name)
+    return @reindeer_ranking
+  end
+
+# Add two "GETTER" methods as well:
+
+# The method age should simply return @age.
+# The method ethnicity should return @ethnicity.
+
+# Update your driver code to test your work.
+
+
 
 class Santa
   def initialize(gender, ethnicity, likes_the_philadelphia_eagles)
