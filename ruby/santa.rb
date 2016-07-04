@@ -19,6 +19,8 @@
 # Call methods on created instances
 # Increase index by +=1
 # Print result of method calls and updated information for each instance
+# Store each instance in hashed hash named santas. Where, the key of the outer most has is the instance and the value is the inner hash. The key of the inner has is favorite_cookie, while the value is the cookie_type. The inner most hash will only store santa's favorite cookie because everything else about the instance will be updated with each method call (celebrate_birthday, get_mad_at). Cookie is not an instance variable of the Santa class, so cookie's value won't get stored or updated with the created instance.
+
 # ------- END PSEUDOCODE FOR LOOP -------- #
 
 class Santa
@@ -38,6 +40,7 @@ class Santa
 
   def eat_milk_and_cookies(cookie)
     puts "That was a good #{cookie}!"
+    return cookie
   end
 
   def celebrate_birthday
@@ -86,6 +89,8 @@ example_likes_the_philadelphia_eagles = [true, false, "prefer not to say", "76er
 
 example_cookies = ["gingerbread", "sugar cookie", "brownie", "samoa", "chocolate chip cookie", "blondie", "macadamia nut cookie"]
 
+# favorite_cookies = []
+santas = {}
 index = 0
 until index == 10 do
   santa = Santa.new("female", "Haitian", "prefer not to say")
@@ -97,15 +102,21 @@ until index == 10 do
   santa.age = random_age.sample
   santa.speak
   puts "Oddly, Santa, like everyone else, was at some point, #{santa.age} years old, but now Santa is one year older. So that makes Santa #{santa.celebrate_birthday}."
-  santa.eat_milk_and_cookies(example_cookies.sample)
+  # santa.eat_milk_and_cookies(example_cookies.sample)
   puts "Current reindeer rankings:"
   p santa.reindeer_ranking
   puts "Since you ate all the #{example_cookies.sample}s, you are no longer one of my top reindeers. Go to the end of the line."
   puts "New reindeer rankings:"
   santa.get_mad_at(santa.reindeer_ranking.sample)
   p santa.reindeer_ranking
+  # favorite_cookies << santa.eat_milk_and_cookies(example_cookies.sample)
+  # santas = {santa => {"favorite_cookie" => nil}}
+  santas[santa] = {"favorite_cookie" => santa.eat_milk_and_cookies(example_cookies.sample)}
   index +=1
 end
+
+p santas
+# p favorite_cookies
 
 # -------------- DRIVER CODE -------------- #
 
