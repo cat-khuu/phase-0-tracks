@@ -18,17 +18,6 @@
 # ------------------------------------------ #
 
 
-# Add two "GETTER" methods as well:
-
-# The method age should simply return @age.
-# The method ethnicity should return @ethnicity.
-
-# @age and @ethnicity should have getter methods as well.
-
-# Update your driver code to test your work.
-
-
-
 class Santa
   def initialize(gender, ethnicity, likes_the_philadelphia_eagles)
     puts "Initializing Santa instance..."
@@ -94,7 +83,13 @@ end
 
 santa = Santa.new("agender", "Brazilian-Korean", false)
 santa = Santa.new("female", "Czech", "prefer not to say")
-santa.Santa.new("gender fluid", "Mystical Creature", true)
-santa.Santa.new("bigender", "Irish", "Eagles, who?")
+santa = Santa.new("gender fluid", "Mystical Creature", true)
+santa = Santa.new("bigender", "Irish", "Eagles, who?")
 santa.speak
 santa.eat_milk_and_cookies("brownie")
+santa.age
+santa.celebrate_birthday
+santa.get_mad_at("Comet")
+santa.gender=("male")
+
+p santa # print last instance of Santa with method updates
