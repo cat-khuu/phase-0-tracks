@@ -28,6 +28,10 @@ class Politician
   def photo_op_with_supporters
     puts "*smiles for photo*"
   end
+
+  def fundraise(promise)
+    puts "If you vote for me, I promise to #{promise}."
+  end
 end
 
 
