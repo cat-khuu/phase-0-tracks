@@ -15,7 +15,11 @@
 # fundraise(promise) - "If you vote for me, I promise to #{promise}." return promise.
 
 class Politician
-
+  def initialize(name, age, political_party)
+    @name = name
+    @age = age
+    @political_party = political_party
+  end
 end
 
 
