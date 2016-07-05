@@ -14,6 +14,7 @@
 # photo_op_with_supporters - "*smiles for photo*"
 # fundraise(promise) - "If you vote for me, I promise to #{promise}." return promise.
 
+# -------- BEGIN POLITICIAN CLASS --------- #
 class Politician
   attr_reader :citizenship
   attr_accessor :name, :age, :political_party
@@ -36,5 +37,9 @@ class Politician
     puts "If you vote for me, I promise to #{promise}."
   end
 end
+
+# ---------- END POLITICIAN CLASS ---------- #
+
+
 
 
