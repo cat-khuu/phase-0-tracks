@@ -15,10 +15,13 @@
 # fundraise(promise) - "If you vote for me, I promise to #{promise}." return promise.
 
 class Politician
+  attr_reader :citizenship
+  attr_accessor :name, :age, :political_party
   def initialize(name, age, political_party)
     @name = name
     @age = age
     @political_party = political_party
+    @citizenship = "United States"
   end
 
   def chants(slogan)
