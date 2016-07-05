@@ -10,8 +10,8 @@
 # political party - string
 
 # METHODS
-# kiss_baby - "*kisses supporter's baby*"
-# smile - "*smiles for photo*"
+# chants - "#{slogan}!"
+# photo_op_with_supporters - "*smiles for photo*"
 # fundraise(promise) - "If you vote for me, I promise to #{promise}." return promise.
 
 class Politician
@@ -19,6 +19,14 @@ class Politician
     @name = name
     @age = age
     @political_party = political_party
+  end
+
+  def chants(slogan)
+    puts "#{slogan}!"
+  end
+
+  def photo_op_with_supporters
+    puts "*smiles for photo*"
   end
 end
 
