@@ -14,4 +14,8 @@
 # smile - "*smiles for photo*"
 # fundraise(promise) - "If you vote for me, I promise to #{promise}." return promise.
 
+class Politician
+
+end
+
 
