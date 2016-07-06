@@ -65,6 +65,9 @@ end
 
 politicians = {}
 
+input = 'n' == true
+
+while input = true
 puts "What is the politician's name?"
 name = gets.chomp
 
@@ -88,3 +91,11 @@ politicians[politician.name].merge!("Citizenship" => politician.citizenship)
 politicians[politician.name].merge!("Political party" => politician.political_party)
 politicians[politician.name].merge!("Slogan" => politician.chants(slogan))
 politicians[politician.name].merge!("Promise" => politician.fundraise(promise))
+
+puts "Are you finished creating candidates for the 2016 general elections? (y/n)"
+input = gets.chomp
+if input == 'y'
+  input = false
+  break
+end
+end
