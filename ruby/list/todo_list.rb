@@ -11,4 +11,7 @@ class TodoList
     @list_of_items.push(chore)
   end
 
+  def delete_item(chore)
+    @list_of_items.delete(chore)
+  end
 end
