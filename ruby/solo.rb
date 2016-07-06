@@ -63,3 +63,4 @@ end
 
 # ---------- END POLITICIAN CLASS ---------- #
 
+politicians = {}
