@@ -99,3 +99,12 @@ while input = true
     break
   end
 end
+
+puts "\nSummarized stats for created politicians:"
+
+politicians.each do |key, value|
+  puts "\n\nName: #{key}"
+  value.each do |key2, value2|
+    puts "\n#{key2}: #{value2}"
+  end
+end
