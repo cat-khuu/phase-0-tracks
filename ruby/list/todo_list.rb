@@ -6,4 +6,9 @@ class TodoList
   def get_items
     @list_of_items
   end
+
+  def add_item(chore)
+    @list_of_items.push(chore)
+  end
+
 end
