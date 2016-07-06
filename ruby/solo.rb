@@ -79,3 +79,5 @@ slogan = gets.chomp
 
 puts "A vote for #{name} is a vote for...?"
 promise = gets.chomp
+
+politician = Politician.new(name, age, political_party)
