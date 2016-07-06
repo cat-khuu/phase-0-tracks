@@ -27,6 +27,7 @@ class Politician
 
   def chants(slogan)
     puts "#{slogan}!"
+    return slogan
   end
 
   def photo_op_with_supporters
@@ -34,12 +35,31 @@ class Politician
   end
 
   def fundraise(promise)
-    puts "If you vote for me, I promise to #{promise}."
+    puts "A vote for me is a vote for #{promise}."
+    return promise
   end
 end
 
 # ---------- END POLITICIAN CLASS ---------- #
 
+# ------- BEGIN PSEUDOCODE FOR LOOP ------- #
 
+# OUTSIDE LOOP:
+# Create politicians hashed hash to store created instances.
+# Outer hash - key(name), value(inner hash).
+# Inner hash - keys (age, political party, slogan, promise), values = user input for each attribute
+# After each instance is created, ask user if they are done creating instances (y/n). input = 'n' == true.
 
+# INSIDE LOOP:
+# while input == true do:
+# Ask user for politician's name, age, political party, slogan, and promise if elected.
+# Use user input for name, age, and political party to initialize new instance.
+# Store information passed for each instance in politician's hash. (name, age, political party)
+# Call methods (chants, fundraise) on each instance and store return value in politicians hash.
+# Ask user if they are done creating candidates. If 'n' (true), then continue creating more politicians. If 'y' (false), then break from loop.
+# Print summarized stats for created politicians by:
+# Iterating through politicians hashed hash.
+# - Iterate FIRST, through the outer most hash (politicians.each do |k, v| puts "Name: #{k}"), then iterate through the inner most hash (v.each do |k2, v2| puts "#{k2}: #{v2}")
+
+# -------- END PSEUDOCODE FOR LOOP -------- #
 
