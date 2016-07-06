@@ -81,3 +81,10 @@ puts "A vote for #{name} is a vote for...?"
 promise = gets.chomp
 
 politician = Politician.new(name, age, political_party)
+
+politicians[politician.name] = name
+politicians[politician.name] = {"Age" => politician.age}
+politicians[politician.name].merge!("Citizenship" => politician.citizenship)
+politicians[politician.name].merge!("Political party" => politician.political_party)
+politicians[politician.name].merge!("Slogan" => politician.chants(slogan))
+politicians[politician.name].merge!("Promise" => politician.fundraise(promise))
