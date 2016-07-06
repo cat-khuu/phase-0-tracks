@@ -10,5 +10,11 @@ module Shout
   end
 end
 
-p Shout.yell_angrily("Not the ice cream cake")
-p Shout.yelling_happily("peace and love for all")
+# p Shout.yell_angrily("Not the ice cream cake")
+# p Shout.yelling_happily("peace and love for all")
+
+class Pedestrian
+end
+
+class Motorist
+end
