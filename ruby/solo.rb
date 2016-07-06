@@ -35,7 +35,7 @@
 
 # -------- END PSEUDOCODE FOR LOOP -------- #
 
-# ------------------------------------------ #
+# ----------------------------------------- #
 class Politician
   attr_reader :citizenship
   attr_accessor :name, :age, :political_party
@@ -47,7 +47,7 @@ class Politician
   end
 
   def chants(slogan)
-    puts "#{slogan}!"
+    # puts "#{slogan}!"
     return slogan
   end
 
@@ -56,12 +56,12 @@ class Politician
   end
 
   def fundraise(promise)
-    puts "A vote for me is a vote for #{promise}."
-    return promise
+    # puts "A vote for me is a vote for #{promise}."
+    return "A vote for me is a vote for #{promise}."
   end
 end
 
-# ---------- END POLITICIAN CLASS ---------- #
+# ---------- END POLITICIAN CLASS --------- #
 
 politicians = {}
 
