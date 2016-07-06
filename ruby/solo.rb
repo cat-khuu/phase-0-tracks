@@ -64,3 +64,18 @@ end
 # ---------- END POLITICIAN CLASS ---------- #
 
 politicians = {}
+
+puts "What is the politician's name?"
+name = gets.chomp
+
+puts "How old is #{name}?"
+age = gets.to_i
+
+puts "#{name}, is a member of which political party?"
+political_party = gets.chomp
+
+puts "What is #{name}'s campaign slogan?"
+slogan = gets.chomp
+
+puts "A vote for #{name} is a vote for...?"
+promise = gets.chomp
