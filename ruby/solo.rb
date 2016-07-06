@@ -68,34 +68,34 @@ politicians = {}
 input = 'n' == true
 
 while input = true
-puts "What is the politician's name?"
-name = gets.chomp
+  puts "What is the politician's name?"
+  name = gets.chomp
 
-puts "How old is #{name}?"
-age = gets.to_i
+  puts "How old is #{name}?"
+  age = gets.to_i
 
-puts "#{name}, is a member of which political party?"
-political_party = gets.chomp
+  puts "#{name}, is a member of which political party?"
+  political_party = gets.chomp
 
-puts "What is #{name}'s campaign slogan?"
-slogan = gets.chomp
+  puts "What is #{name}'s campaign slogan?"
+  slogan = gets.chomp
 
-puts "A vote for #{name} is a vote for...?"
-promise = gets.chomp
+  puts "A vote for #{name} is a vote for...?"
+  promise = gets.chomp
 
-politician = Politician.new(name, age, political_party)
+  politician = Politician.new(name, age, political_party)
 
-politicians[politician.name] = name
-politicians[politician.name] = {"Age" => politician.age}
-politicians[politician.name].merge!("Citizenship" => politician.citizenship)
-politicians[politician.name].merge!("Political party" => politician.political_party)
-politicians[politician.name].merge!("Slogan" => politician.chants(slogan))
-politicians[politician.name].merge!("Promise" => politician.fundraise(promise))
+  politicians[politician.name] = name
+  politicians[politician.name] = {"Age" => politician.age}
+  politicians[politician.name].merge!("Citizenship" => politician.citizenship)
+  politicians[politician.name].merge!("Political party" => politician.political_party)
+  politicians[politician.name].merge!("Slogan" => politician.chants(slogan))
+  politicians[politician.name].merge!("Promise" => politician.fundraise(promise))
 
-puts "Are you finished creating candidates for the 2016 general elections? (y/n)"
-input = gets.chomp
-if input == 'y'
-  input = false
-  break
-end
+  puts "Are you finished creating candidates for the 2016 general elections? (y/n)"
+  input = gets.chomp
+  if input == 'y'
+    input = false
+    break
+  end
 end
