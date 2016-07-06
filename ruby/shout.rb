@@ -6,6 +6,9 @@ module Shout
   end
 
   def self.yelling_happily(words)
-    words.upcase + "!!!" = " :D :D :D"
+    words.upcase + "!!!" + " :D :D :D"
   end
 end
+
+p Shout.yell_angrily("Not the ice cream cake")
+p Shout.yelling_happily("peace and love for all")
