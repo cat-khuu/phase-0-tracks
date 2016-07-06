@@ -5,7 +5,7 @@ module Shout
     words + "!!!" + " :("
   end
 
-  def yelling_happily(words)
+  def self.yelling_happily(words)
     words.upcase + "!!!" = " :D :D :D"
   end
 end
