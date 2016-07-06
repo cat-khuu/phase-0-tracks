@@ -10,9 +10,9 @@
 # political party - string
 
 # METHODS
-# chants - "#{slogan}!"
-# photo_op_with_supporters - "*smiles for photo*"
-# fundraise(promise) - "If you vote for me, I promise to #{promise}." return promise.
+# chants - return "#{slogan}!"
+# photo_op_with_supporters(disposition) - if disposition == 'y', then return "Gladly. Let's take a selfie!" Else, return "I need to be worshipped from a distance."
+# fundraise(promise) - return "If you vote for me, I promise to #{promise}."
 
 # ------- BEGIN PSEUDOCODE FOR LOOP ------- #
 
@@ -51,8 +51,12 @@ class Politician
     return slogan
   end
 
-  def photo_op_with_supporters
-    puts "*smiles for photo*"
+  def photo_op_with_supporters(disposition)
+    if disposition == 'y'
+      return "Gladly. Let's take a selfie!"
+    else
+      return "I need to be worshipped from a distance."
+    end
   end
 
   def fundraise(promise)
@@ -68,36 +72,40 @@ politicians = {}
 input = 'n' == true
 
 while input = true
-  puts "What is the politician's name?"
-  name = gets.chomp
+puts "What is the politician's name?"
+name = gets.chomp
 
-  puts "How old is #{name}?"
-  age = gets.to_i
+puts "How old is #{name}?"
+age = gets.to_i
 
-  puts "#{name}, is a member of which political party?"
-  political_party = gets.chomp
+puts "#{name}, is a member of which political party?"
+political_party = gets.chomp
 
-  puts "What is #{name}'s campaign slogan?"
-  slogan = gets.chomp
+puts "What is #{name}'s campaign slogan?"
+slogan = gets.chomp
 
-  puts "A vote for #{name} is a vote for...?"
-  promise = gets.chomp
+puts "Would you take pictures with your supporters? (y/n)"
+disposition = gets.chomp
 
-  politician = Politician.new(name, age, political_party)
+puts "A vote for #{name} is a vote for...?"
+promise = gets.chomp
 
-  politicians[politician.name] = name
-  politicians[politician.name] = {"Age" => politician.age}
-  politicians[politician.name].merge!("Citizenship" => politician.citizenship)
-  politicians[politician.name].merge!("Political party" => politician.political_party)
-  politicians[politician.name].merge!("Slogan" => politician.chants(slogan))
-  politicians[politician.name].merge!("Promise" => politician.fundraise(promise))
+politician = Politician.new(name, age, political_party)
 
-  puts "Are you finished creating candidates for the 2016 general elections? (y/n)"
-  input = gets.chomp
-  if input == 'y'
-    input = false
-    break
-  end
+politicians[politician.name] = name
+politicians[politician.name] = {"Age" => politician.age}
+politicians[politician.name].merge!("Citizenship" => politician.citizenship)
+politicians[politician.name].merge!("Political party" => politician.political_party)
+politicians[politician.name].merge!("Slogan" => politician.chants(slogan))
+politicians[politician.name].merge!("Photo with supporters" => politician.photo_op_with_supporters(disposition))
+politicians[politician.name].merge!("Promise" => politician.fundraise(promise))
+
+puts "Are you finished creating candidates for the 2016 general elections? (y/n)"
+input = gets.chomp
+if input == 'y'
+  input = false
+  break
+end
 end
 
 puts "\nSummarized stats for created politicians:"
@@ -106,5 +114,6 @@ politicians.each do |key, value|
   puts "\n\nName: #{key}"
   value.each do |key2, value2|
     puts "\n#{key2}: #{value2}"
-  end
 end
+end
+
