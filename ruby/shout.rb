@@ -14,7 +14,9 @@ end
 # p Shout.yelling_happily("peace and love for all")
 
 class Pedestrian
+  include Shout
 end
 
 class Motorist
+  include Shout
 end
