@@ -14,4 +14,8 @@ class TodoList
   def delete_item(chore)
     @list_of_items.delete(chore)
   end
+
+  def get_item(index)
+    @list_of_items[index]
+  end
 end
