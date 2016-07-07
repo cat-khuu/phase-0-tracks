@@ -109,10 +109,13 @@ end
 
 # Loop until 50 instances of Dragon have been created. index = 1, do until index == 51. Increase index by +=1.
 
+dragon_hash = {}
 index = 1
 until index == 51 do
   dragon = Dragon.new
+  dragon_hash[index] = dragon
   index+=1
 end
 
+p dragon_hash
 
