@@ -84,6 +84,14 @@
 # Store instances in hash called dragon_hash. Key = index, and value = created instance.
 # Iterate over dragon_hash by using .each to call each method (breathe_fire,toast_marshmallows, fly) on each instance.
 
+# **Iteration/data structure practice**
+# Define dragon_count method to print: "Dragon ##{index}"
+# Iterate over dragon hash
+# For each instance in hash, call toast_marshmallows
+# Push each method call into new data structure - marshmallows_toasted_hash
+# Key = dragon count
+# Value = result of method call for each instance
+
 # ----------------------------------------- #
 
 class Dragon
@@ -91,6 +99,10 @@ class Dragon
   def initialize
     @altitude = altitude
     @amount = amount
+  end
+
+  def dragon_count(index)
+    "Dragon ##{index}"
   end
 
   def breathe_fire
@@ -126,3 +138,11 @@ dragon_hash.each do |index, instance|
   instance.fly(index*100)
 end
 
+# -------------- PRACTICE ---------------- #
+marshmallows_toasted_hash = {}
+
+dragon_hash.each do |index, instance|
+  marshmallows_toasted_hash[instance.dragon_count(index)] =  instance.toast_marshmallows(index)
+end
+
+p marshmallows_toasted_hash
