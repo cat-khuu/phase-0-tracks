@@ -78,12 +78,13 @@
 # fido.dog_years(4)
 # fido.sit
 
-# <------ Write your own Class ------->
+# ------------- DRAGON CLASS -------------- #
+##  Pseudocode for loop
+# Loop until 50 instances of Dragon have been created. index = 1, do until index == 51. Increase index by +=1.
+# Store instances in hash called dragon_hash. Key = index, and value = created instance.
+# Iterate over dragon_hash by using .each to call each method (breathe_fire,toast_marshmallows, fly) on each instance.
 
-# 2. Modify your loop so that it stores all of the instances in a data structure.
-# 3. Iterate over that data structure using .each and call the instance methods you wrote on each instance. So if you wrote a Gymnast class, this is where you'd call .flip and .jump on each of your instances of Gymnast.
-
-
+# ----------------------------------------- #
 
 class Dragon
   attr_accessor :altitude, :amount
@@ -93,21 +94,21 @@ class Dragon
   end
 
   def breathe_fire
+    puts "*sizzle*"
     "*sizzle*"
   end
 
   def toast_marshmallows(amount)
-    "I toasted #{amount} marshmallows."
+    puts "I toasted #{amount} marshmallows."
+    "#{amount} marshmallows toasted"
   end
 
   def fly(altitude)
-    "I can fly #{altitude} feet high!"
+    puts "I can fly #{altitude} feet high!"
   end
 
 end
 
-
-# Loop until 50 instances of Dragon have been created. index = 1, do until index == 51. Increase index by +=1.
 
 dragon_hash = {}
 index = 1
@@ -117,5 +118,11 @@ until index == 51 do
   index+=1
 end
 
-p dragon_hash
+# p dragon_hash
+
+dragon_hash.each do |index, instance|
+  instance.breathe_fire
+  instance.toast_marshmallows(index)
+  instance.fly(index*100)
+end
 
