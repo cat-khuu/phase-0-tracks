@@ -89,24 +89,27 @@
 
 
 class Dragon
+  attr_accessor :altitude, :amount
   def initialize
     @altitude = altitude
     @amount = amount
   end
 
   def breathe_fire
-    puts "*sizzle*"
+    "*sizzle*"
   end
 
   def toast_marshmallows(amount)
-    puts "I toasted #{amount} marshmallows."
+    "I toasted #{amount} marshmallows."
   end
 
   def fly(altitude)
-    puts "I can fly #{altitude} feet high!"
+    "I can fly #{altitude} feet high!"
   end
 
 end
+
+
 
 
 
