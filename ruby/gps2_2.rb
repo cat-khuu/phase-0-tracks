@@ -87,3 +87,14 @@ def print_list(grocery_list_hash)
 end
 
 p print_list(grocery_list_hash)
+
+# --------------- REFLECTION -------------- #
+
+# On your own, add a commented reflection section to your gps2_2.rb file. Answer the following questions in your reflection:
+
+# What did you learn about pseudocode from working on this challenge? If I spend my time thinking through and writing the pseudocode for each method I need to write, then it greatly reduces the amount of time I spend just winging it. If I pseudocode beforehand, then I will have a good working outline of what I need to do for each step and how might I go about doing it.
+# What are the tradeoffs of using arrays and hashes for this challenge? I think it's easier to access and store information in an array, but an array was not the best data structure to store our grocery list. If I needed just a list of items with no specified amount or type of item, then an array might work. However, with this challenge, a hash best suited the information we had and was the best way to store it.
+# What does a method return? I am finally beginning to understand better a return value vs. printing an item. You can print an item (puts "#{item}"), but it will return nil unless you specify it: return item, or make sure the last line of the method is "#{item}" minus the puts. Because the last line of each method will be evaluated and returned.
+# What kind of things can you pass into methods as arguments? You can pass a string, integer, variable, or even the result of another method (which was the case with this challenge). Seriously, my mind was blown when we were able to pass grocery_list_hash as an argument.
+# How can you pass information between methods? For this challenge, we created another variable (grocery_list_hash) to store the result from the method (create_list). From then on, we passed grocery_list_hash as an argument. grocery_list_hash was a hash containing our items and defaulted quantities.
+# What concepts were solidified in this challenge, and what concepts are still confusing? I'm still working on return value and puts vs p, but this challenge really helped me understand how values from other methods can be passed on to other methods without using a class.
