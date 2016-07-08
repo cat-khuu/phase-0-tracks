@@ -1,4 +1,4 @@
-# Method to create a list
+## Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps:
   # Use .split to separate individual items. Store in variable grocery_array
