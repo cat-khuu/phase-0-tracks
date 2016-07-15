@@ -20,3 +20,8 @@ function reverseStr(str) {
 
 }
 
+// DRIVER CODE
+console.log(reverseStr("mary"));
+console.log(reverseStr(8));
+console.log(reverseStr("mississippi"));
+console.log(reverseStr("hello"));
