@@ -45,8 +45,9 @@ function Car(color, model, isSafeRide) {
 
 console.log("Let's customize a car...");
 var anotherCar = new Car("blue", "Toyota Hybrid", true);
+
 console.log(anotherCar);
-console.log("My car is fast:");
+console.log("This car is fast. Here it rev its engine:")
 anotherCar.rev();
 console.log("----");
 
