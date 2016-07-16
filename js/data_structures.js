@@ -28,3 +28,31 @@ for (var index = 0; index < horse_names.length; index +=1) {
 }
 
 console.log(horseDescriptions);
+
+function Car(color, model, isSafeRide) {
+  console.log("My car:", this);
+
+  this.color = color;
+  this.model = model;
+  this.isSafeRide = isSafeRide;
+
+  this.rev = function() {
+    console.log("Vroom! Vroom!");
+  };
+
+    console.log("CAR INITIALIZATION COMPLETE");
+}
+
+console.log("Let's customize a car...");
+var anotherCar = new Car("blue", "Toyota Hybrid", true);
+console.log(anotherCar);
+console.log("My car is fast:");
+anotherCar.rev();
+console.log("----");
+
+console.log("Let's customize another car...");
+var yetAnotherCar = new Car("silver", "Hummer H3", false);
+console.log(yetAnotherCar);
+console.log("This " + yetAnotherCar.color + " , " + yetAnotherCar.model + " is fast, too!");
+yetAnotherCar.rev();
+console.log("----");
