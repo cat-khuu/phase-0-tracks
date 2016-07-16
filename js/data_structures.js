@@ -29,6 +29,10 @@ for (var index = 0; index < horse_names.length; index +=1) {
 
 console.log(horseDescriptions);
 
+// ------------------------------------------- //
+// Constructor Function
+
+
 function Car(color, model, isSafeRide) {
   console.log("My car:", this);
 
@@ -42,6 +46,8 @@ function Car(color, model, isSafeRide) {
 
     console.log("CAR INITIALIZATION COMPLETE");
 }
+
+// Call constructor function...
 
 console.log("Let's customize a car...");
 var anotherCar = new Car("blue", "Toyota Hybrid", true);
