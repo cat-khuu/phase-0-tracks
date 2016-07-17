@@ -6,3 +6,10 @@
 // - write function to evaluate b.length - a.length, and to return result of b - a.
 // return the string at index[0] in the array.
 
+function longestStr(array) {
+  array.sort(function(a,b) {return b.length - a.length});
+  console.log(array[0]);
+}
+
+// Driver Code //
+
