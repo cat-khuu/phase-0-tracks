@@ -26,16 +26,15 @@ class VirusPredictor
 
 # number of deaths for each state depending on population density and population. The greater the population density then the greater the number of deaths.
   def predicted_deaths
-    # predicted deaths is solely based on population density
+  #   # predicted deaths is solely based on population density
 
-    case @population_density
-    when @population_density >= 200
+    if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
-    when @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    when @population_density >= 100
+    elsif @population_density >= 150
+      number_of_deats = (@population * 0.3).floor
+    elsif @population_density >= 100
       number_of_deaths = (@population * 0.2).floor
-    when @population_density >= 50
+    elsif @population_density >= 50
       number_of_deaths = (@population * 0.1).floor
     else
       number_of_deaths = (@population * 0.05).floor
@@ -47,28 +46,19 @@ class VirusPredictor
 
 # how quickly the virus will spread. The greater the population density then the quicker the virus will spread.
   def speed_of_spread #in months
-    # We are still perfecting our formula here. The speed is also affected
-    # by additional factors we haven't added into this functionality.
-    speed = 0.0
 
-    case @population_density
-    when @population_density >= 200
-      speed += 0.5
-    when @population_density >= 150
-      speed += 1
-    when @population_density >= 100
-      speed += 1.5
-    when @population_density >= 50
-      speed += 2
-    else
-      speed += 2.5
+    benchmark = 200
+    speed = 0.5
+
+    until @population_density >= benchmark
+      benchmark -=50
+      speed +=0.5
     end
 
-    puts " and will spread across the state in #{speed} months.\n\n"
-
+    puts " and will spread across the state in #{speed} months. \n\n"
   end
-
 end
+
 
 #=======================================================================
 
