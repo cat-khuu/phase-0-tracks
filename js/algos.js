@@ -13,3 +13,5 @@ function longestStr(array) {
 
 // Driver Code //
 
+longestStr(["long string", "longest string", "longer string"]);
+longestStr(["mississippi", "sassafrass", "cupcake", "imakickyourcutiepatootie"]);
