@@ -77,6 +77,6 @@ function keyValuePairMatch(object1, object2) {
 
 // Driver Code //
 
-longestStr(["long string", "longest string", "longer string"]);
-longestStr(["mississippi", "sassafrass", "cupcake", "imakickyourcutiepatootie"]);
+// longestStr(["long string", "longest string", "longer string"]);
+// longestStr(["mississippi", "sassafrass", "cupcake", "imakickyourcutiepatootie"]);
 
