@@ -80,3 +80,5 @@ function keyValuePairMatch(object1, object2) {
 // longestStr(["long string", "longest string", "longer string"]);
 // longestStr(["mississippi", "sassafrass", "cupcake", "imakickyourcutiepatootie"]);
 
+console.log(keyValuePairMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
+console.log(keyValuePairMatch({color: "green", pet: "dog"}, {name: "green", animal: "dog"}));
