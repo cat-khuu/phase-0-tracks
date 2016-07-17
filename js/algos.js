@@ -25,9 +25,54 @@
 // - ELSE, return false.
 
 // ########################################### //
+
 function longestStr(array) {
   array.sort(function(a,b) {return b.length - a.length});
   console.log(array[0]);
+}
+
+
+function keyValuePairMatch(object1, object2) {
+  var arrayKeys1 = []; arrayKeys2 = [];
+  var keyMatches = [];
+  var totalMatches = 0;
+
+  for (var keys1 in object1) {
+    if (!object1.hasOwnProperty(keys1)) {
+      continue;
+    }
+
+    arrayKeys1.push(keys1);
+  }
+
+  for (var keys2 in object2) {
+    if (!object2.hasOwnProperty(keys2)) {
+      continue;
+    }
+
+    arrayKeys2.push(keys2);
+  }
+
+
+  for (var index = 0; index < arrayKeys1.length; index +=1) {
+    if (arrayKeys1[index] == arrayKeys2[index]) {
+      keyMatches.push(arrayKeys1[index]);
+    }
+  }
+
+  for (var e = 0; e < keyMatches.length; e +=1) {
+      if (object1[keyMatches[e]] == object2[keyMatches[e]]) {
+        totalMatches +=1;
+      }
+    }
+
+
+  if (totalMatches > 0) {
+    return true;
+  } else {
+    return false;
+  }
+
 }
 
 // Driver Code //
