@@ -91,6 +91,31 @@ function keyValuePairMatch(object1, object2) {
 
 }
 
+
+function longestStr(array) {
+  array.sort(function(a,b) {return b.length - a.length});
+  console.log(array[0]);
+}
+
+
+function generateRandomString(num) {
+    var  alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var result = "";
+    var array = [];
+
+    for (var i = 0; i < num; i+=1) {
+    result = "";
+    while (result.length < Math.floor(Math.random() * 10) +1  && num > 0) {
+     result += alpha[Math.floor(Math.random() * alpha.length)];
+      }
+     array.push(result);
+    }
+    console.log(array);
+    return array;
+
+}
+
+
 // Driver Code //
 
 // longestStr(["long string", "longest string", "longer string"]);
