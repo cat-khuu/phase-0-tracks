@@ -123,3 +123,5 @@ function generateRandomString(num) {
 
 // console.log(keyValuePairMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
 // console.log(keyValuePairMatch({color: "green", pet: "dog"}, {name: "green", animal: "dog"}));
+
+generateRandomString(10);
