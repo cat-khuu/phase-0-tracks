@@ -26,19 +26,21 @@ class VirusPredictor
 
 # number of deaths for each state depending on population density and population. The greater the population density then the greater the number of deaths.
   def predicted_deaths
-  #   # predicted deaths is solely based on population density
+  # predicted deaths is solely based on population density
 
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deats = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
+
+    if @population_density > 50
+      benchmark = 200
+      multiplier = 0.4
+      until @population_density >= benchmark
+        benchmark -=50
+        multiplier -=0.1
+      end
     else
-      number_of_deaths = (@population * 0.05).floor
+      multiplier = 0.05
     end
+
+    number_of_deaths = (@population * multiplier).floor
 
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
@@ -55,12 +57,13 @@ class VirusPredictor
       speed +=0.5
     end
 
-    puts " and will spread across the state in #{speed} months. \n\n"
-  end
+    puts " and the virus will spread across the state in #{speed} months. \n\n"
+    end
+
 end
 
 
-#=======================================================================
+#================================================#
 
 # DRIVER CODE
  # initialize VirusPredictor for each state
@@ -84,5 +87,5 @@ STATE_DATA.each do |state, population|
 end
 
 
-#=======================================================================
+#================================================#
 # Reflection Section
