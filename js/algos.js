@@ -26,6 +26,22 @@
 
 // ########################################### //
 
+// FUNCTION: generateRandomString
+// Define variables alpha (character set to generate random strings), result (empty string), array (empty array to contain random strings)
+// Create loop:
+// - While i = 0, i < num, i +=1, do:
+// Define variable result as an empty string that resets itself after each random string is created and is pushed in array
+// Create another loop, such that:
+// - each random string is at least greater than 0 (no empty strings) and the length of each string is between 1 and 10, however, the length is chosen randomly
+// Choose each letter randomly from alpha. Example: alpha[random number between alpha.length]
+// Append each random letter to result
+// Push result into array
+// Repeat process until specified number
+// Print array once number of random strings has been generated
+// Return array
+
+// ########################################### //
+
 function longestStr(array) {
   array.sort(function(a,b) {return b.length - a.length});
   console.log(array[0]);
