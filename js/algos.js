@@ -105,7 +105,7 @@ function generateRandomString(num) {
 
     for (var i = 0; i < num; i+=1) {
     result = "";
-    while (result.length < Math.floor(Math.random() * 10) +1  && num > 0) {
+    while (result.length < Math.floor(Math.random() * 10)+1  && num > 0) {
      result += alpha[Math.floor(Math.random() * alpha.length)];
       }
      array.push(result);
@@ -124,4 +124,5 @@ function generateRandomString(num) {
 // console.log(keyValuePairMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
 // console.log(keyValuePairMatch({color: "green", pet: "dog"}, {name: "green", animal: "dog"}));
 
-generateRandomString(10);
+var randomStrings = generateRandomString(10);
+longestStr(randomStrings);
