@@ -1,0 +1,58 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue0;}
+\margl1440\margr1440\vieww14440\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 1. Join three tables.
+\b0 \
+\
+
+\b command: \cb2 SELECT review_id, reviews.stars, reviews.comment, reviews.business_id, businesses.business_name, reviews.user_id, users.first_name, users.last_name FROM reviews LEFT JOIN businesses ON reviews.business_id = businesses.business_id LEFT JOIN users ON reviews.user_id = users.user_id;\cb1 \
+\
+output: \
+
+\b0 \
+review_id   stars       comment                                                             business_id  business_name  user_id     first_name  last_name\
+----------  ----------  ------------------------------------------------------------------  -----------  -------------  ----------  ----------  ----------\
+1           3.5         Fresh fish for the price, but waaaaaay too much sauce on the rolls  6            Sushi World    2           Mandy       Kaling\
+2           4           What a gent is the owner. No charge for tow of second vehicle       2            Amir\'92s Towing  7           Denzel      George\
+3           5           They had the puppy bowl on                                          7            JoeBob's Spor  2           Mandy       Kaling\
+4           5           Brought my bealge, snoop dog, here. Snoop loved it!                 3            The Beagle Ni  6           Merryl      Streepman\
+5           1           Called Amir to tow me out of a ditch. He was a no-show :(           2            Amir\'92s Towing  2           Mandy       Kaling\
+6           3.5         It's no wedding chapel in Vegas, but it will do. Free rice to thow  1            Grundy Hollow  5           Holly       Berry\
+\
+
+\b 2. Display just user\'92s name, business name, the star rating, and the comment. 
+\b0 \
+\
+
+\b command: \cb2 SELECT users.first_name, users.last_name, businesses.business_name, reviews.stars, reviews.comment FROM reviews LEFT JOIN users ON reviews.user_id = users.user_id LEFT JOIN businesses ON reviews.business_id = businesses.business_id;\cb1 \
+\
+output: \
+
+\b0 \
+first_name  last_name   business_name  stars       comment\
+----------  ----------  -------------  ----------  ------------------------------------------------------------------\
+Mandy       Kaling      Sushi World    3.5         Fresh fish for the price, but waaaaaay too much sauce on the rolls\
+Denzel      George      The Beagle Ni  4           What a gent is the owner. No charge for tow of second vehicle\
+Mandy       Kaling      JoeBob's Spor  5           They had the puppy bowl on\
+Merryl      Streepman   The Beagle Ni  5           Brought my bealge, snoop dog, here. Snoop loved it!\
+Mandy       Kaling      Amir\'92s Towing  1           Called Amir to tow me out of a ditch. He was a no-show :(\
+Holly       Berry       Grundy Hollow  3.5         It's no wedding chapel in Vegas, but it will do. Free rice to thow\
+\
+
+\b 3. View the data of all three tables for just one particular business.
+\b0 \
+\
+
+\b command: \cb2 SELECT * FROM reviews JOIN users ON reviews.user_id = users.user_id JOIN businesses ON reviews.business_id = businesses.business_id WHERE reviews.business_id=3;
+\b0 \
+\cb1 \
+
+\b output:
+\b0  \
+\
+review_id  stars   comment                                              business_id   user_id   user_id   first_name   last_name     business_id   business_name\
+---------  ------  ---------------------------------------------------  ------------  --------  --------  -----------  ------------  ------------  --------------------\
+4          5       Brought my beagle, snoop dog, here. Snoop loved it!  3             6         6         Merryl       Streepman     3             The Beagle Nightclub}
