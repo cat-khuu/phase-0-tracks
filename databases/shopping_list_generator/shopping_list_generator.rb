@@ -132,3 +132,8 @@ end
 puts "-----------------------"
   puts "Here is your current shopping list:"
   puts "\n"
+
+list = db.execute("SELECT * FROM shopping_list")
+list.each do |item|
+  puts item.join "\s"
+end
