@@ -109,6 +109,8 @@ emergency_contact = Cheryl Grace\
             phone = 6103407561\
        teacher_id = 3\
 \
+\
+\
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
 \ls2\ilvl0\cf0 {\listtext	 2.	} Update an item that meets some condition (you can choose a condition that makes sense).\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
@@ -127,9 +129,8 @@ emergency_contact = Cheryl Grace\
 \b0 \cb1 \
 	\
 	\
-id                name             grade    emergency_contact    phone      teacher_id\
-----------   -------------         ----------  	-----------------  	----------        ----------\
-1           Wil Bur-Sweet     3           Ben Bur              2155107643         3\
+id|name|grade|emergency_contact|phone|teacher_id\
+1|Wil Bur-Sweet|3|Ben Bur|2155107643|3\
 \
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
 \ls3\ilvl2\cf0     3.      Display the information in both tables using one query.\
@@ -148,20 +149,22 @@ id                name             grade    emergency_contact    phone      teac
 \
 \
 \
-id              name           grade     emergency_contact    phone    teacher_id  teacher_id    name              grade       room\
-----------  -------------      ----------  -----------------             ----------         ----------  ----------  ------------------        ----------  ----------\
-1           Wil Bur-Sweet     3         Ben Bur                2155107643      3           3           Sandra Lewandowski  3        167\
-2           Dominique Wil    1         Haley Wilson         8569919210     1           1           Hope Higgley               1        215\
-3           Zach Brown        1         Thomas Brown      7108332999     1           1           Hope Higgley              1         215\
-4           Harriet Groen     2          Kimberly Groenlee  7362107856   2           2           Peter Larson               2         108\
-5           Shane Xiao        3          Sherry Lee              8567668996    3           3           Sandra Lewandowski  3        167\
-6           Veronica Lope    3          Yasmine Lopez       2675934233    3           3           Sandra Lewandowski  3        167\
-7           Charlie Tate        3          Kolleen Tate            8566619165    3           3           Sandra Lewandowski  3        167\
-8           Awe Some          2          Sally Some              6107658722    2           2           Peter Larson             2         108\
-9           Ace Chapman     1         Deborah Chapman   7349109429   1           1           Hope Higgley            1          215\
-10          Kimberly Wale    1         Jane Wales              8565516511   1           1           Hope Higgley             1         215\
-11          David Goldber    2         Yael Goldberg          8562311110    2           2           Peter Larson              2         108\
-12          Emma Grace     3         Cheryl Grace            6103407561   3           3           Sandra Lewandowski  3       167\
+id|name|grade|emergency_contact|phone|teacher_id|teacher_id|name|grade|room\
+1|Wil Bur-Sweet|3|Ben Bur|2155107643|3|3|Sandra Lewandowski|3|167\
+3|Zach Brown|1|Thomas Brown|7108332999|1|1|Hope Higgley|1|215\
+4|Harriet Groenleer|2|Kimberly Groenleer|7362107856|2|2|Peter Larson|2|108\
+5|Shane Xiao|3|Sherry Lee|8567668996|3|3|Sandra Lewandowski|3|167\
+6|Veronica Lopez|3|Yasmine Lopez|2675934233|3|3|Sandra Lewandowski|3|167\
+7|Charlie Tate|3|Kolleen Tate|8566619165|3|3|Sandra Lewandowski|3|167\
+8|Awe Some|2|Sally Some|6107658722|2|2|Peter Larson|2|108\
+9|Ace Chapman|1|Deborah Chapman|7349109429|1|1|Hope Higgley|1|215\
+10|Kimberly Wales|1|Jane Wales|8565516511|1|1|Hope Higgley|1|215\
+11|David Goldberg|2|Yael Goldberg|8562311110|2|2|Peter Larson|2|108\
+12|Emma Grace|3|Cheryl Grace|6103407561|3|3|Sandra Lewandowski|3|167\
+\
+
+\b * I deleted the student at id = 2 before running this prompt, which is why it\'92s not present in the table. 
+\b0 \
 \
 \
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
@@ -178,20 +181,18 @@ id              name           grade     emergency_contact    phone    teacher_i
 
 \b0 \
 \
-name            name                              grade       room\
--------------     ------------------                  ----------   ----------\
-Wil Bur-Sweet  Sandra Lewandowski      3           167\
-Dominique Wil  Hope Higgley                  1           215\
-Zach Brown     Hope Higgley                   1           215\
-Harriet Groen  Peter Larson                     2           108\
-Shane Xiao     Sandra Lewandowski       3           167\
-Veronica Lope  Sandra Lewandowski      3           167\
-Charlie Tate   Sandra Lewandowski         3           167\
-Awe Some       Peter Larson                    2           108\
-Ace Chapman    Hope Higgley                1           215\
-Kimberly Wale  Hope Higgley                 1           215\
-David Goldber  Peter Larson                  2           108\
-Emma Grace     Sandra Lewandowski   3           167\
+name|name|grade|room\
+Wil Bur-Sweet|Sandra Lewandowski|3|167\
+Zach Brown|Hope Higgley|1|215\
+Harriet Groenleer|Peter Larson|2|108\
+Shane Xiao|Sandra Lewandowski|3|167\
+Veronica Lopez|Sandra Lewandowski|3|167\
+Charlie Tate|Sandra Lewandowski|3|167\
+Awe Some|Peter Larson|2|108\
+Ace Chapman|Hope Higgley|1|215\
+Kimberly Wales|Hope Higgley|1|215\
+David Goldberg|Peter Larson|2|108\
+Emma Grace|Sandra Lewandowski|3|167\
 \
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
@@ -210,7 +211,7 @@ Emma Grace     Sandra Lewandowski   3           167\
 \cf0 \
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
 \ls6\ilvl0\cf0 		
-\b \cb2 command: DELETE FROM students WHERE id = 2;\cb1 \
+\b \cb2 command: DELETE FROM students WHERE id = 3;\cb1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \b0 \cf0 		       SELECT * FROM students;\
@@ -222,20 +223,16 @@ Emma Grace     Sandra Lewandowski   3           167\
 
 \b0 \
 \
-id             name          grade       emergency_contact           phone        teacher_id\
-----------  -------------   ----------          -----------------                 ----------         ----------\
-1           Wil Bur-Sweet  3           Ben Bur                        2155107643         3\
-3           Zach Brown     1           Thomas Brown             7108332999         1\
-4           Harriet Groen  2           Kimberly Groenlee        7362107856         2\
-5           Shane Xiao     3           Sherry Lee                     8567668996        3\
-6           Veronica Lope  3           Yasmine Lopez             2675934233        3\
-7           Charlie Tate     3              Kolleen Tate                8566619165        3\
-8           Awe Some       2           Sally Some                     6107658722        2\
-9           Ace Chapman    1           Deborah Chapman      7349109429        1\
-10          Kimberly Wale  1           Jane Wales                    8565516511      1\
-11          David Goldber  2           Yael Goldberg                8562311110       2\
-12          Emma Grace     3           Cheryl Grace                6103407561      3\
-\
+1|Wil Bur-Sweet|3|Ben Bur|2155107643|3\
+4|Harriet Groenleer|2|Kimberly Groenleer|7362107856|2\
+5|Shane Xiao|3|Sherry Lee|8567668996|3\
+6|Veronica Lopez|3|Yasmine Lopez|2675934233|3\
+7|Charlie Tate|3|Kolleen Tate|8566619165|3\
+8|Awe Some|2|Sally Some|6107658722|2\
+9|Ace Chapman|1|Deborah Chapman|7349109429|1\
+10|Kimberly Wales|1|Jane Wales|8565516511|1\
+11|David Goldberg|2|Yael Goldberg|8562311110|2\
+12|Emma Grace|3|Cheryl Grace|6103407561|3\
 
 \b \
 
