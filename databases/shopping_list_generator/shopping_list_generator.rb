@@ -1,6 +1,6 @@
 require 'sqlite3'
 
-db = SQLite3::Database.new("shopping_list_generator.db")
+db = SQLite3::Database.new("recipe_generator.db")
 
 # create tables for each season: Spring, Summer, Fall, Winter
 db.execute("CREATE TABLE IF NOT EXISTS Spring(spring_id INTEGER PRIMARY KEY, spring_veg_name VARCHAR(255) UNIQUE, March BOOLEAN, April BOOLEAN, May BOOLEAN)")
@@ -11,8 +11,8 @@ db.execute("CREATE TABLE IF NOT EXISTS Fall(fall_id INTEGER PRIMARY KEY, fall_ve
 
 db.execute("CREATE TABLE IF NOT EXISTS Winter(winter_id INTEGER PRIMARY KEY, winter_veg_name VARCHAR(255) UNIQUE, December BOOLEAN, January BOOLEAN, February BOOLEAN)")
 
-db.execute("CREATE TABLE IF NOT EXISTS Shopping_list(list_id INTEGER PRIMARY KEY, item_name VARCHAR(255) UNIQUE")
-
+# create table for Shopping_list:
+db.execute("CREATE TABLE IF NOT EXISTS Shopping_list(list_id INTEGER PRIMARY KEY, item_name VARCHAR (255) UNIQUE)")
 
 # populate Spring table:
 db.execute("INSERT OR IGNORE INTO Spring (spring_veg_name, March, April, May) VALUES ('artichokes', 'true', 'true', 'true')")
@@ -30,7 +30,6 @@ db.execute("INSERT OR IGNORE INTO Spring (spring_veg_name, March, April, May) VA
 db.execute("INSERT OR IGNORE INTO Spring (spring_veg_name, March, April, May) VALUES ('spinach', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Spring (spring_veg_name, March, April, May) VALUES ('sweet potatoes', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Spring (spring_veg_name, March, April, May) VALUES ('turnips', 'true', 'true', 'false')")
-
 
 # populate Summer table:
 db.execute("INSERT OR IGNORE INTO Summer (summer_veg_name, June, July, August) VALUES ('arugula', 'true', 'true', 'true')")
@@ -53,7 +52,6 @@ db.execute("INSERT OR IGNORE INTO Summer (summer_veg_name, June, July, August) V
 db.execute("INSERT OR IGNORE INTO Summer (summer_veg_name, June, July, August) VALUES ('tomatillos', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Summer (summer_veg_name, June, July, August) VALUES ('tomatoes', 'true', 'true', 'true')")
 
-
 # populate Fall table:
 db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, November) VALUES ('artichokes', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, November) VALUES ('arugula', 'true', 'true', 'true')")
@@ -73,7 +71,7 @@ db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, Novem
 db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, November) VALUES ('bell peppers', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, November) VALUES ('spinach', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, November) VALUES ('summer squash', 'true', 'true', 'false')")
-db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, November) VALUES ('winter', 'false', 'true', 'true')")
+db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, November) VALUES ('winter squash', 'false', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, November) VALUES ('sweet potatoes', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, November) VALUES ('tomatillos', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Fall (fall_veg_name, September, October, November) VALUES ('tomatoes', 'true', 'true', 'false')")
@@ -113,17 +111,20 @@ def display_seasonal_vegetables(db, month)
   end
 end
 
+
 puts "What month is it? (Ex. 'June')"
 month = gets.chomp
-
 display_seasonal_vegetables(db, month)
+
+puts "\n\nSelect from the above list your favorite vegetables. Press 'enter' after each item. Type 'done' when finished creating your list. (Ex. 'okra')"
 
 done = false
 until done == true do
-  puts "Select from the above list your favorite vegetables. Press 'enter' after each item. Type 'done' when finished creating your list. (Ex. 'okra')"
   input = gets.chomp
-  db.execute("INSERT INTO Shopping_list (item_name) VALUES (?)", [input])
-  if input == 'done'
+    if input != 'done'
+      done = false
+      db.execute("INSERT OR IGNORE INTO shopping_list (item_name) VALUES (?)", [input])
+  elsif input == 'done'
     done = true
   end
 end
@@ -142,9 +143,9 @@ puts "\n\nIs there anything you want to remove from the list? (y/n)"
 response = gets.chomp
 
 if response == 'y'
-  puts "Which item number do you want to remove? (Ex. 'okra')"
+  puts "Which item do you want to remove? (Ex. 'okra')"
   remove_item = gets.chomp
-  db.execute("DELETE FROM shopping_list WHERE item_name = (?)", [remove_item])
+  db.execute("DELETE FROM Shopping_list WHERE item_name = (?)", [remove_item])
 else
   puts "Printing your shopping list..."
 end
@@ -152,6 +153,7 @@ end
 puts "-----------------------"
 
 puts "\nHere is your updated seasonal shopping list:"
+puts "\n"
 
 updated_list = db.execute("SELECT * FROM shopping_list")
 updated_list.each do |item|
