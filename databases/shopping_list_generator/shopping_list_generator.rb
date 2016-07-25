@@ -91,3 +91,24 @@ db.execute("INSERT OR IGNORE INTO Winter (winter_veg_name, December, January, Fe
 db.execute("INSERT OR IGNORE INTO Winter (winter_veg_name, December, January, February) VALUES ('parsnips', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Winter (winter_veg_name, December, January, February) VALUES ('spinach', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Winter (winter_veg_name, December, January, February) VALUES ('turnips', 'true', 'true', 'true')")
+
+def display_seasonal_vegetables(db, month)
+  if month == 'March'|| month == 'April'|| month == 'May'
+    result = db.execute("SELECT spring_veg_name FROM Spring WHERE #{month}='true'")
+  elsif month == 'June'|| month == 'July'|| month == 'August'
+    result = db.execute("SELECT summer_veg_name FROM Summer WHERE #{month}='true'")
+  elsif month == 'September'|| month == 'October'|| month == 'November'
+    result = db.execute("SELECT fall_veg_name FROM Fall WHERE #{month}='true'")
+  elsif month == 'December'|| month == 'January' || month == 'February'
+    result = db.execute("SELECT winter_veg_name FROM Winter WHERE #{month}='true'")
+  end
+
+
+  puts "-----------------------"
+  puts "\nWhat vegetables to eat in #{month}:"
+  puts "\n"
+
+  result.each do |row|
+    puts row.join "\s"
+  end
+end
