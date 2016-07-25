@@ -1,6 +1,6 @@
 require 'sqlite3'
 
-db = SQLite3::Database.new("recipe_generator.db")
+db = SQLite3::Database.new("shopping_list_generator.db")
 
 # create tables for each season: Spring, Summer, Fall, Winter
 db.execute("CREATE TABLE IF NOT EXISTS Spring(spring_id INTEGER PRIMARY KEY, spring_veg_name VARCHAR(255) UNIQUE, March BOOLEAN, April BOOLEAN, May BOOLEAN)")
