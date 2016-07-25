@@ -137,3 +137,23 @@ list = db.execute("SELECT * FROM shopping_list")
 list.each do |item|
   puts item.join "\s"
 end
+
+puts "\n\nIs there anything you want to remove from the list? (y/n)"
+response = gets.chomp
+
+if response == 'y'
+  puts "Which item number do you want to remove? (Ex. 'okra')"
+  remove_item = gets.chomp
+  db.execute("DELETE FROM shopping_list WHERE item_name = (?)", [remove_item])
+else
+  puts "Printing your shopping list..."
+end
+
+puts "-----------------------"
+
+puts "\nHere is your updated seasonal shopping list:"
+
+updated_list = db.execute("SELECT * FROM shopping_list")
+updated_list.each do |item|
+  puts item.at(1)
+end
