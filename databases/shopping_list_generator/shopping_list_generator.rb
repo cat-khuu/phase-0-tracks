@@ -112,3 +112,8 @@ def display_seasonal_vegetables(db, month)
     puts row.join "\s"
   end
 end
+
+puts "What month is it? (Ex. 'June')"
+month = gets.chomp
+
+display_seasonal_vegetables(db, month)
