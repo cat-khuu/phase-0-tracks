@@ -12,6 +12,7 @@ db.execute("CREATE TABLE IF NOT EXISTS Fall(fall_id INTEGER PRIMARY KEY, fall_ve
 db.execute("CREATE TABLE IF NOT EXISTS Winter(winter_id INTEGER PRIMARY KEY, winter_veg_name VARCHAR(255) UNIQUE, December BOOLEAN, January BOOLEAN, February BOOLEAN)")
 
 # create table for Shopping_list:
+
 db.execute("CREATE TABLE IF NOT EXISTS Shopping_list(list_id INTEGER PRIMARY KEY, item_name VARCHAR (255) UNIQUE)")
 
 # populate Spring table:
@@ -90,6 +91,7 @@ db.execute("INSERT OR IGNORE INTO Winter (winter_veg_name, December, January, Fe
 db.execute("INSERT OR IGNORE INTO Winter (winter_veg_name, December, January, February) VALUES ('spinach', 'true', 'true', 'true')")
 db.execute("INSERT OR IGNORE INTO Winter (winter_veg_name, December, January, February) VALUES ('turnips', 'true', 'true', 'true')")
 
+
 def display_seasonal_vegetables(db, month)
   if month == 'March'|| month == 'April'|| month == 'May'
     result = db.execute("SELECT spring_veg_name FROM Spring WHERE #{month}='true'")
@@ -116,7 +118,9 @@ puts "What month is it? (Ex. 'June')"
 month = gets.chomp
 display_seasonal_vegetables(db, month)
 
+
 puts "\n\nSelect from the above list your favorite vegetables. Press 'enter' after each item. Type 'done' when finished creating your list. (Ex. 'okra')"
+
 
 done = false
 until done == true do
@@ -139,13 +143,14 @@ list.each do |item|
   puts item.join "\s"
 end
 
+
 puts "\n\nIs there anything you want to remove from the list? (y/n)"
 response = gets.chomp
 
 if response == 'y'
   puts "Which item do you want to remove? (Ex. 'okra')"
   remove_item = gets.chomp
-  db.execute("DELETE FROM Shopping_list WHERE item_name = (?)", [remove_item])
+  db.execute("DELETE FROM shopping_list WHERE item_name = (?)", [remove_item])
 else
   puts "Printing your shopping list..."
 end
@@ -153,7 +158,6 @@ end
 puts "-----------------------"
 
 puts "\nHere is your updated seasonal shopping list:"
-puts "\n"
 
 updated_list = db.execute("SELECT * FROM shopping_list")
 updated_list.each do |item|
