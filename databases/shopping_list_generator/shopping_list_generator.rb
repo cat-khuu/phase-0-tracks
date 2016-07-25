@@ -117,3 +117,18 @@ puts "What month is it? (Ex. 'June')"
 month = gets.chomp
 
 display_seasonal_vegetables(db, month)
+
+done = false
+until done == true do
+  puts "Select from the above list your favorite vegetables. Press 'enter' after each item. Type 'done' when finished creating your list. (Ex. 'okra')"
+  input = gets.chomp
+  db.execute("INSERT INTO Shopping_list (item_name) VALUES (?)", [input])
+  if input == 'done'
+    done = true
+  end
+end
+
+
+puts "-----------------------"
+  puts "Here is your current shopping list:"
+  puts "\n"
