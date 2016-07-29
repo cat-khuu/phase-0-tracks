@@ -71,6 +71,33 @@ ul.sub-menu {
   display: none;
 }
 
+/* links styling */
+nav a:hover,
+nav a:focus,
+nav a:active {
+  color: rgb(50,50,50);
+}
+nav a {
+  line-height: 50px;
+  padding: 0 18px;
+  margin: 0 90px;
+}
+nav a {
+  color: white;
+  display: block;
+}
+
+/* styling for sub-menu links */
+nav li li a {
+  margin: 0 20px;
+  padding: 0;
+  border-bottom: solid; 1px blue;
+}
+
+nav li li:last-child a {
+  border-bottom: none;
+}
+
 
 
 
