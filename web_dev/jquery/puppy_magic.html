@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adorable Dogs</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Join Our Team</a></li>
+        <li class="dropdown">
+          <a href="#">Meet Our Dogs</a>
+          <ul class="sub-menu">
+            <li><a href="#">Roster</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Sponsor a Dog</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <h1 class="homeh1">Happy Dogs Make for Happy Humans</h1>
+    <h2 class="homeh2">Enough cuteness to make you have faith in humanity again</h2>
+    <p class="homedescript">Just look at this corgi...</p>
+    <img class="homepics" src="corgis_with_homer.jpg" alt="corgis with Homer from The Simpsons">
+    <p class="homedescript">And this mini bull terrier!</p>
+    <img class="homepics" src="mini_bull_terrier_driving.jpg" alt="mini bull terrier at the wheel">
+    <p class="homedescript">It's saying: let's take control of our lives and spend more time hanging out. Or, in this MBT's case - behind the wheel.</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+      $(function() {
+        $('.dropdown').on('click', function() {
+          $(this).children('.sub-menu').toggle();
+        })
+      });
+    </script>
+  </body>
+</html>
