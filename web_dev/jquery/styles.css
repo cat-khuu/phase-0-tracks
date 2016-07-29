@@ -34,6 +34,23 @@ img.homepics {
 
 }
 
+/* main navigation menu */
+nav {
+  background-color: #1E90FF;
+  padding: 2% 25%;
+  min-width: 960px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1%;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+}
 
 
 
