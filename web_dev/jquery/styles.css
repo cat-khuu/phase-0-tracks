@@ -1,0 +1,42 @@
+/* style body*/
+body {
+  margin: 0;
+  margin-bottom: 5%;
+  padding: 0;
+  max-width: 960px;
+  background-color: #FFFFFF;
+  color: black;
+  font-variant: normal;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.6;
+  font-family: georgia;
+}
+
+h1.homeh1 {
+  padding: 3% 50%;
+  min-width: 930px;
+}
+
+h2.homeh2 {
+  padding: 0 45%;
+  min-width: 960px;
+}
+
+p.homedescript {
+padding: 0 45%;
+min-width: 30%
+
+}
+
+img.homepics {
+  padding: 0 45%;
+
+}
+
+
+
+
+
+
+
