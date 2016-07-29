@@ -49,3 +49,11 @@ get '/contact' do
   "<p><strong>We are always looking for visitor feedback on how relevant our content is on our page. Reach us by email: feedback@tech_innov.com or at our headquarters in Hershey, PA. 9876 Blueberry Road, Hershey, PA 12345</strong></p>"
 end
 
+get '/great_job' do
+  name = params[:name]
+  if name
+  "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
