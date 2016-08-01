@@ -17,6 +17,14 @@ get '/students/new' do
   erb :new_student
 end
 
+get '/extra_curriculars' do
+  # @students_music = db.execute("SELECT age FROM students WHERE age BETWEEN 10 AND 20")
+  # @students_forensics = db.execute("SELECT age FROM students WHERE age=25")
+  @students = db.execute("SELECT * FROM students")
+
+  erb :extra_curriculars
+end
+
 # create new students via
 # a form
 post '/students' do
