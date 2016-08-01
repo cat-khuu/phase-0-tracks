@@ -14,7 +14,12 @@
       <p><strong>Notable NFL members:</strong> Oprah Winfrey, Stephen Colbert, the creator of The Simpsons, Sec. or State, Hillary Clinton, Vice-President, Joe Biden.</p>
     <h3>Theatre</h3>
       <p>Feel like you belong and are part of a team when you join theatre. Help us put on productions of Pippin, Aladdin, and The Little Shop of Horrors. In theatre, we know it is not <em>all</em> about actors and acting. A lot more goes into making these productions run. Learn about sound and lighting, costumes, set design, and scripting when you join us.</p>
-
+      <h3>Current Members:</h3>
+      <ul>
+        <% @students.each do |student| %>
+          <li><%= student['name'] %></li>
+        <% end %>
+      </ul>
     <h3>Science Olympiad</h3>
       <p>If storming the castle with a catapult or identifying plants is your thing, then come join science olympiad. We love a good science joke, and we hope you do, too.</p>
 
