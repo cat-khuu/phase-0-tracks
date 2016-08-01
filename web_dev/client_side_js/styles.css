@@ -1,0 +1,104 @@
+/* style body*/
+body {
+  margin: 0;
+  margin-bottom: 5%;
+  padding: 0;
+  max-width: 960px;
+  background-color: #FFFFFF;
+  color: black;
+  font-variant: normal;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.6;
+  font-family: georgia;
+}
+
+h1.homeh1 {
+  padding: 3% 50%;
+  min-width: 930px;
+}
+
+h2.homeh2 {
+  padding: 0 45%;
+  min-width: 960px;
+}
+
+p.homedescript {
+padding: 0 45%;
+min-width: 30%
+
+}
+
+img.homepics {
+  padding: 0 45%;
+
+}
+
+/* main navigation menu */
+nav {
+  background-color: #1E90FF;
+  padding: 2% 25%;
+  min-width: 960px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1%;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+/* sub navigation menu */
+nav li ul {
+  background-color: #00BFFF;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 200px;
+}
+nav li li {
+  position: relative;
+  margin: 0;
+  display: block;
+}
+
+/* hide sub-menu links */
+ul.sub-menu {
+  display: none;
+}
+
+/* links styling */
+nav a:hover,
+nav a:focus,
+nav a:active {
+  color: rgb(50,50,50);
+}
+nav a {
+  line-height: 50px;
+  padding: 0 18px;
+  margin: 0 90px;
+}
+nav a {
+  color: white;
+  display: block;
+}
+
+/* styling for sub-menu links */
+nav li li a {
+  margin: 0 20px;
+  padding: 0;
+  border-bottom: solid; 1px blue;
+}
+
+nav li li:last-child a {
+  border-bottom: none;
+}
+
+
+
+
+
